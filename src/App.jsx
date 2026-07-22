@@ -107,6 +107,17 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const optionsList = ['email', 'code', 'launch', 'wordpress', 'sell'];
+    const interval = setInterval(() => {
+      setActiveHeroOption((prev) => {
+        const idx = optionsList.indexOf(prev);
+        return optionsList[(idx + 1) % optionsList.length];
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const handleDomainSearch = (e) => {
     if (e) e.preventDefault();
     if (!domainInput.trim()) return;
