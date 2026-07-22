@@ -303,19 +303,227 @@ p {
   animation-delay: 1.5s;
 }
 
-/* Hero Section */
+/* Redesigned Hero Section */
 .hero-section {
-  padding: 60px 0 80px 0;
-  text-align: center;
-  background: radial-gradient(circle at top right, rgba(0, 245, 155, 0.08) 0%, rgba(255,255,255,0) 50%);
+  position: relative;
+  padding: 100px 0 80px 0;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 45%, rgba(15, 23, 42, 0.75) 65%, rgba(15, 23, 42, 0.3) 100%), url('/stinger_hero_bg.png') no-repeat center right / cover;
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .hero-section {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95) 60%, rgba(15, 23, 42, 0.85) 100%), url('/stinger_hero_bg.png') no-repeat center right / cover;
+    text-align: center;
+    padding: 60px 0;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    text-align: left;
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 245, 155, 0.15);
+  border: 1px solid rgba(0, 245, 155, 0.3);
+  color: var(--stinger-mint);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
 }
 
 .hero-title {
-  font-size: 38px;
-  color: var(--text-dark);
-  max-width: 800px;
-  margin: 0 auto 24px auto;
+  font-size: 36px;
+  color: var(--text-light);
+  margin-bottom: 18px;
+  line-height: 1.15;
   letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 54px;
+  }
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: var(--stinger-mint) !important;
+  color: var(--stinger-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 245, 155, 0.3);
+}
+
+/* Floating Stack on the Right side */
+.hero-visual-col {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1023px) {
+  .hero-visual-col {
+    display: none;
+  }
+}
+
+.floating-options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 320px;
+  z-index: 10;
+}
+
+.floating-option-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.floating-option-card:hover {
+  transform: translateX(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.floating-option-card.active {
+  background: rgba(0, 75, 53, 0.85);
+  border-color: var(--stinger-mint);
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 245, 155, 0.25);
+}
+
+.option-left-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.option-icon {
+  font-size: 16px;
+}
+
+.checkmark-badge {
+  width: 18px;
+  height: 18px;
+  background-color: var(--stinger-mint);
+  color: var(--stinger-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Trustpilot Hero Footer */
+.hero-rating-footer {
+  margin-top: 56px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-rating-footer {
+    align-items: flex-start;
+  }
+}
+
+.rating-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trustpilot-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.trustpilot-stars {
+  display: flex;
+  background-color: #00b67a;
+  padding: 2px 6px;
+  border-radius: 2px;
+  gap: 2px;
+}
+
+.trustpilot-star-dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.rating-subtext {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media (min-width: 768px) {

@@ -56,6 +56,7 @@ const StarIcon = ({ className }) => (
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeHeroOption, setActiveHeroOption] = useState('launch');
   const [domainInput, setDomainInput] = useState('');
   const [selectedTld, setSelectedTld] = useState('.com');
   const [searchResult, setSearchResult] = useState(null);
@@ -227,15 +228,84 @@ function App() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Redesigned Dark Hero Section */}
       <section className="hero-section">
         <div className="container">
-          <h1 className="hero-title">
-            Fast, secure, smarter<br />
-            AI-powered website services
-          </h1>
+          <div className="hero-grid">
+            
+            {/* Left Content */}
+            <div>
+              <span className="hero-badge">Web Hosting & Beyond</span>
+              <h1 className="hero-title">
+                Build, host, grow<br />
+                your online presence
+              </h1>
+              <p className="hero-subtitle">
+                Your all-in-one platform for online success.
+              </p>
+              <button className="btn hero-btn">EXPLORE SERVICES</button>
 
-          {/* Grid Layout of Hosting Cards */}
+              {/* Trustpilot stars & rating */}
+              <div className="hero-rating-footer">
+                <div className="rating-stars-row">
+                  <span>Excellent</span>
+                  <div className="trustpilot-badge">
+                    <div className="trustpilot-stars">
+                      <span className="trustpilot-star-dot"></span>
+                      <span className="trustpilot-star-dot"></span>
+                      <span className="trustpilot-star-dot"></span>
+                      <span className="trustpilot-star-dot"></span>
+                      <span className="trustpilot-star-dot"></span>
+                    </div>
+                    <span>Trustpilot</span>
+                  </div>
+                </div>
+                <p className="rating-subtext">
+                  Top industry rating - <strong>4.9 out of 5 stars</strong>. Trusted by the owners of 3 Million domains.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Visual Floating Options */}
+            <div className="hero-visual-col">
+              <div className="floating-options-stack">
+                {[
+                  { id: 'email', label: 'Send email campaigns', icon: '✉' },
+                  { id: 'code', label: 'Code with AI', icon: '✦' },
+                  { id: 'launch', label: 'Launch a website', icon: '💻' },
+                  { id: 'wordpress', label: 'Transfer WordPress sites', icon: 'Ⓦ' },
+                  { id: 'sell', label: 'Sell online', icon: '🛒' }
+                ].map((opt) => (
+                  <div
+                    key={opt.id}
+                    className={`floating-option-card ${activeHeroOption === opt.id ? 'active' : ''}`}
+                    onClick={() => setActiveHeroOption(opt.id)}
+                  >
+                    <div className="option-left-content">
+                      <span className="option-icon">{opt.icon}</span>
+                      <span>{opt.label}</span>
+                    </div>
+                    {activeHeroOption === opt.id && (
+                      <div className="checkmark-badge">✓</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid Section */}
+      <section className="services-section" style={{ padding: '80px 0', backgroundColor: '#FFFFFF' }}>
+        <div className="container">
+          <h2 className="text-center" style={{ fontSize: '38px', color: 'var(--text-dark)', marginBottom: '16px' }}>
+            Fast, secure, smarter AI-powered website services
+          </h2>
+          <p className="text-center text-muted" style={{ maxWidth: '600px', margin: '0 auto 48px auto', fontSize: '16px' }}>
+            Choose the perfect hosting and AI tools to build, launch, and grow your online presence.
+          </p>
           <div className="services-grid">
             
             {/* 1. Hosting for WordPress */}
