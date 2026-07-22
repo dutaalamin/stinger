@@ -345,16 +345,14 @@ function App() {
           <p className="text-center text-muted" style={{ maxWidth: '600px', margin: '0 auto 48px auto', fontSize: '16px' }}>
             Choose the perfect hosting and AI tools to build, launch, and grow your online presence.
           </p>
-          <div className="services-grid">
+          <div className="bento-grid">
             
             {/* 1. Hosting for WordPress */}
-            <div className="service-card card-large card-large-3" style={{ backgroundColor: 'var(--card-blue)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title">Hosting for WordPress</h3>
-                <p className="card-desc">Start or migrate WordPress on our ultrafast hosting.</p>
-                <button className="btn btn-dark-cta btn-sm mb-4">GET STARTED</button>
-              </div>
-              <div className="card-visual">
+            <div className="bento-card bento-wp">
+              <h3>Hosting for WordPress</h3>
+              <p>Start or migrate WordPress on our ultrafast hosting.</p>
+              <button className="btn-bento">GET STARTED</button>
+              <div className="bento-visual">
                 <div className="wp-dashboard-mock">
                   <div style={{ display: 'flex', gap: '4px', borderBottom: '1px solid #E2E8F0', paddingBottom: '6px' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }}></span>
@@ -382,13 +380,11 @@ function App() {
             </div>
 
             {/* 2. Website Builder */}
-            <div className="service-card card-large card-large-3" style={{ backgroundColor: 'var(--card-silver)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title">Website Builder</h3>
-                <p className="card-desc">Create a website and get online easily and quickly.</p>
-                <button className="btn btn-dark-cta btn-sm mb-4">START FREE</button>
-              </div>
-              <div className="card-visual">
+            <div className="bento-card bento-builder">
+              <h3>Website Builder</h3>
+              <p>Create a website and get online easily and quickly.</p>
+              <button className="btn-bento">START FREE</button>
+              <div className="bento-visual">
                 <div className="builder-mock">
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 8px', borderBottom: '1px solid #E2E8F0', background: '#F8FAFC' }}>
                     <span style={{ fontSize: '8px', fontWeight: 'bold', color: '#1E293B' }}>Sage. Botanical Studio</span>
@@ -411,14 +407,12 @@ function App() {
             </div>
 
             {/* 3. Stinger AI Coder */}
-            <div className="service-card card-large card-large-4" style={{ backgroundColor: 'var(--card-purple)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title">Stinger AI</h3>
-                <p className="card-desc">Build apps and websites by chatting with AI. Launch faster and host them on our all-inclusive hosting platform.</p>
-                <button className="btn btn-dark-cta btn-sm mb-4">START BUILDING</button>
-              </div>
-              <div className="card-visual" style={{ width: '50%', height: '70%' }}>
-                <div className="ai-coder-mock">
+            <div className="bento-card bento-ai">
+              <h3>Coderick AI</h3>
+              <p>Build apps and websites by chatting with AI. Launch faster and host them on our all-inclusive hosting platform.</p>
+              <button className="btn-bento">START BUILDING</button>
+              <div className="bento-visual">
+                <div className="ai-coder-mock" style={{height: '100%'}}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9', paddingBottom: '4px' }}>
                     <span style={{ fontSize: '7px', fontWeight: '700', color: '#6B21A8' }}>✦ AI Assistant</span>
                     <span style={{ fontSize: '6px', color: '#94A3B8' }}>Active</span>
@@ -437,15 +431,13 @@ function App() {
             </div>
 
             {/* 4. Web Hosting */}
-            <div className="service-card card-large card-large-2" style={{ backgroundColor: 'var(--card-green)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title" style={{ fontSize: '24px' }}>Web Hosting</h3>
-                <p className="card-desc" style={{ fontSize: '13px', marginBottom: '16px' }}>Build and grow your site with our fast & reliable hosting.</p>
-                <a href="#" style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--stinger-dark)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  VIEW PLANS <ArrowRightIcon className="w-4 h-4" style={{ width: '14px', height: '14px' }} />
-                </a>
-              </div>
-              <div className="card-visual" style={{ width: '85%', height: '40%' }}>
+            <div className="bento-card bento-hosting">
+              <h3>Web Hosting</h3>
+              <p>Build and grow your site with our fast & reliable hosting.</p>
+              <a href="#" className="link-bento">
+                VIEW PLANS ↗
+              </a>
+              <div className="bento-visual">
                 <div className="hosting-status-mock">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
                     <span style={{ fontSize: '7px', color: '#64748B' }}>Server Health</span>
@@ -473,15 +465,13 @@ function App() {
             </div>
 
             {/* 5. Online Store */}
-            <div className="service-card card-large card-large-3" style={{ backgroundColor: 'var(--card-yellow)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title">Online store</h3>
-                <p className="card-desc">Build your online store easily and start selling within hours.</p>
-                <a href="#" style={{ fontSize: '14px', fontWeight: 'bold', color: 'var(--stinger-dark)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '24px' }}>
-                  TRY FREE <ArrowRightIcon className="w-4 h-4" style={{ width: '14px', height: '14px' }} />
-                </a>
-              </div>
-              <div className="card-visual" style={{ width: '80%', height: '48%' }}>
+            <div className="bento-card bento-store">
+              <h3>Online store</h3>
+              <p>Build your online store easily and start selling within hours.</p>
+              <a href="#" className="link-bento">
+                TRY FREE ↗
+              </a>
+              <div className="bento-visual">
                 <div className="store-mock">
                   <div style={{ display: 'flex', gap: '6px', height: '100%', alignItems: 'center' }}>
                     <div style={{ width: '35px', height: '35px', background: '#FEF3C7', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -500,13 +490,11 @@ function App() {
             </div>
 
             {/* 6. Email Marketing */}
-            <div className="service-card card-large card-large-3" style={{ backgroundColor: 'var(--card-rose)' }}>
-              <div className="service-card-info">
-                <h3 className="card-title">Email Marketing</h3>
-                <p className="card-desc">Grow your business with easy and effective email marketing.</p>
-                <button className="btn btn-dark-cta btn-sm mb-4">LEARN MORE</button>
-              </div>
-              <div className="card-visual" style={{ width: '70%', height: '48%' }}>
+            <div className="bento-card bento-email">
+              <h3>Email Marketing</h3>
+              <p>Grow your business with easy and effective email marketing.</p>
+              <button className="btn-bento">LEARN MORE</button>
+              <div className="bento-visual">
                 <div className="email-campaign-mock">
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', height: '100%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #F1F5F9', paddingBottom: '3px' }}>
