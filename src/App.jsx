@@ -28,6 +28,13 @@ const ShieldIcon = ({ className }) => (
   </svg>
 );
 
+const LockIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0110 0v4" />
+  </svg>
+);
+
 const UserIcon = ({ className }) => (
   <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
@@ -425,11 +432,11 @@ function App() {
               <span>1-year Free Domain Privacy</span>
             </div>
             <div className="domain-benefit-item">
-              <ShieldIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
+              <LockIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
               <span>2-factor Authentication</span>
             </div>
             <div className="domain-benefit-item">
-              <ShieldIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
+              <GlobeIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
               <span>24/7 Expert Support</span>
             </div>
           </div>
@@ -446,17 +453,6 @@ function App() {
                   onChange={(e) => setDomainInput(e.target.value)}
                 />
               </div>
-              <select
-                className="domain-select-tld"
-                value={selectedTld}
-                onChange={(e) => setSelectedTld(e.target.value)}
-              >
-                <option value=".com">.com</option>
-                <option value=".net">.net</option>
-                <option value=".org">.org</option>
-                <option value=".shop">.shop</option>
-                <option value=".info">.info</option>
-              </select>
               <button type="submit" className="domain-search-btn">
                 {searching ? 'SEARCHING...' : 'SEARCH'}
               </button>
@@ -496,6 +492,9 @@ function App() {
                 {tld.toUpperCase()}
               </button>
             ))}
+            <a href="#" className="domain-view-all">
+              VIEW ALL ↗
+            </a>
           </div>
         </div>
       </section>

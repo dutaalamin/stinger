@@ -720,44 +720,41 @@ p {
 
 /* Domain Search Section */
 .domain-section {
-  background-color: var(--bg-dark);
+  background-color: #0c0d0e;
+  background-image: linear-gradient(rgba(12, 13, 14, 0.4), rgba(12, 13, 14, 0.4)), url('https://static-cdn.siteground.com/img/home/domain_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--text-light);
   padding: 100px 0;
   position: relative;
   overflow: hidden;
-  background-image: radial-gradient(ellipse at 50% 50%, rgba(0, 75, 53, 0.4) 0%, rgba(15, 23, 42, 0) 70%);
-}
-
-.domain-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
 }
 
 .domain-title {
   font-size: 32px;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: var(--font-display);
 }
 
 @media (min-width: 768px) {
   .domain-title {
-    font-size: 42px;
+    font-size: 44px;
   }
 }
 
 .domain-benefits {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 40px;
-  color: #94A3B8;
+  gap: 32px;
+  margin-bottom: 48px;
+  color: #E2E8F0;
   font-size: 15px;
+  font-family: var(--font-sans);
 }
 
 .domain-benefit-item {
@@ -767,97 +764,100 @@ p {
 }
 
 .domain-benefit-item svg {
-  color: var(--stinger-mint);
+  color: #E2E8F0;
 }
 
 .domain-search-wrapper {
-  max-width: 700px;
-  margin: 0 auto 32px auto;
+  max-width: 800px;
+  margin: 0 auto 36px auto;
   position: relative;
   z-index: 10;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  padding: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .domain-search-bar {
   display: flex;
   background-color: white;
-  border-radius: var(--radius-full);
-  padding: 6px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 99px;
+  padding: 4px 4px 4px 20px;
   position: relative;
   align-items: center;
+  width: 100%;
 }
 
 .domain-input-group {
   display: flex;
   flex: 1;
   align-items: center;
-  padding: 0 16px 0 24px;
+  padding: 0;
+}
+
+.domain-input-group svg {
+  width: 20px;
+  height: 20px;
+  color: #94A3B8;
+  margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .domain-search-input {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 15px;
   font-family: var(--font-sans);
   color: var(--text-dark);
+  background: transparent;
+  height: 48px;
 }
 
 .domain-search-input::placeholder {
   color: #94A3B8;
-}
-
-.domain-select-tld {
-  border: none;
-  background: transparent;
-  color: var(--text-dark);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  padding-right: 12px;
-  cursor: pointer;
-  outline: none;
-  border-right: 1px solid #E2E8F0;
-  margin-right: 12px;
+  font-style: italic;
 }
 
 .domain-search-btn {
-  background-color: #1e1e1e;
+  background-color: #1a1b1c;
   color: white;
   border: none;
-  border-radius: var(--radius-full);
-  padding: 14px 28px;
+  border-radius: 99px;
+  padding: 0 32px;
+  height: 42px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   cursor: pointer;
   transition: var(--transition);
+  letter-spacing: 0.5px;
 }
 
 .domain-search-btn:hover {
   background-color: #000;
-  transform: scale(1.02);
 }
 
 /* Domain Search Result */
 .domain-result-card {
-  max-width: 700px;
-  margin: 24px auto 0 auto;
+  max-width: 100%;
+  margin: 20px 0 0 0;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-md);
+  border-radius: 16px;
   padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: float 4s ease-in-out infinite;
 }
 
 /* Domain Quick Filters */
 .domain-filters {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
   max-width: 800px;
@@ -865,22 +865,39 @@ p {
 }
 
 .domain-filter-btn {
-  background-color: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-light);
-  border-radius: var(--radius-full);
-  padding: 8px 18px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border-radius: 99px;
+  padding: 8px 20px;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 14px;
+  font-size: 13px;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .domain-filter-btn:hover, .domain-filter-btn.active {
-  background-color: white;
-  color: var(--stinger-dark);
-  border-color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.domain-view-all {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  transition: opacity 0.2s;
+}
+
+.domain-view-all:hover {
+  opacity: 0.8;
 }
 
 /* AI Studio Section */
