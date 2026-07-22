@@ -353,29 +353,7 @@ function App() {
               <p>Start or migrate WordPress on our ultrafast hosting.</p>
               <button className="btn-bento">GET STARTED</button>
               <div className="bento-visual">
-                <div className="wp-dashboard-mock">
-                  <div style={{ display: 'flex', gap: '4px', borderBottom: '1px solid #E2E8F0', paddingBottom: '6px' }}>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#EF4444' }}></span>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></span>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }}></span>
-                  </div>
-                  <div style={{ display: 'flex', flex: 1, gap: '8px' }}>
-                    <div style={{ width: '30%', backgroundColor: '#F8FAFC', borderRight: '1px solid #E2E8F0', padding: '4px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <div style={{ height: '6px', width: '80%', backgroundColor: '#CBD5E1', borderRadius: '2px' }}></div>
-                      <div style={{ height: '6px', width: '60%', backgroundColor: '#E2E8F0', borderRadius: '2px' }}></div>
-                      <div style={{ height: '6px', width: '70%', backgroundColor: '#E2E8F0', borderRadius: '2px' }}></div>
-                    </div>
-                    <div style={{ flex: 1, padding: '4px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      <div style={{ height: '14px', width: '90%', backgroundColor: '#E0F2FE', borderRadius: '4px', padding: '2px 4px', display: 'flex', alignItems: 'center' }}>
-                        <span style={{ fontSize: '7px', fontWeight: 'bold', color: '#0369A1' }}>Welcome to WordPress!</span>
-                      </div>
-                      <div style={{ display: 'flex', gap: '6px' }}>
-                        <div style={{ flex: 1, height: '30px', backgroundColor: '#F1F5F9', borderRadius: '4px', border: '1px dashed #CBD5E1' }}></div>
-                        <div style={{ flex: 1, height: '30px', backgroundColor: '#F1F5F9', borderRadius: '4px', border: '1px dashed #CBD5E1' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/wordpress_hosting_en.webp" alt="Hosting for WordPress" />
               </div>
             </div>
 
@@ -385,24 +363,7 @@ function App() {
               <p>Create a website and get online easily and quickly.</p>
               <button className="btn-bento">START FREE</button>
               <div className="bento-visual">
-                <div className="builder-mock">
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 8px', borderBottom: '1px solid #E2E8F0', background: '#F8FAFC' }}>
-                    <span style={{ fontSize: '8px', fontWeight: 'bold', color: '#1E293B' }}>Sage. Botanical Studio</span>
-                    <span style={{ fontSize: '6px', padding: '2px 4px', background: '#E2E8F0', borderRadius: '2px' }}>Publish</span>
-                  </div>
-                  <div style={{ padding: '8px', display: 'flex', gap: '8px', height: '100%' }}>
-                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <div style={{ height: '40px', background: '#F1F5F9', borderRadius: '4px', overflow: 'hidden', position: 'relative' }}>
-                        <div style={{ position: 'absolute', bottom: '4px', left: '4px', width: '20px', height: '20px', background: '#10B981', borderRadius: '50%' }}></div>
-                      </div>
-                    </div>
-                    <div style={{ width: '25px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <div style={{ height: '10px', background: '#E2E8F0', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', fontWeight: 'bold' }}>Aa</div>
-                      <div style={{ height: '10px', background: '#E2E8F0', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', fontWeight: 'bold' }}>🖼</div>
-                      <div style={{ height: '10px', background: '#E2E8F0', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', fontWeight: 'bold' }}>⚙</div>
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/website_builder.webp" alt="Website Builder" />
               </div>
             </div>
 
@@ -412,21 +373,7 @@ function App() {
               <p>Build apps and websites by chatting with AI. Launch faster and host them on our all-inclusive hosting platform.</p>
               <button className="btn-bento">START BUILDING</button>
               <div className="bento-visual">
-                <div className="ai-coder-mock" style={{height: '100%'}}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9', paddingBottom: '4px' }}>
-                    <span style={{ fontSize: '7px', fontWeight: '700', color: '#6B21A8' }}>✦ AI Assistant</span>
-                    <span style={{ fontSize: '6px', color: '#94A3B8' }}>Active</span>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', flex: 1 }}>
-                    <div style={{ background: '#FAF5FF', padding: '4px 6px', borderRadius: '4px', alignSelf: 'flex-start', maxWidth: '90%' }}>
-                      <span style={{ fontSize: '7px', color: '#581C87' }}>Build a portfolio site...</span>
-                    </div>
-                    <div style={{ display: 'flex', gap: '4px', marginTop: 'auto' }}>
-                      <div style={{ flex: 1, height: '12px', background: '#F1F5F9', borderRadius: '99px', border: '1px solid #E2E8F0' }}></div>
-                      <div style={{ width: '12px', height: '12px', background: '#6B21A8', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '6px' }}>➔</div>
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/coderick_ai_en.webp" alt="Coderick AI" />
               </div>
             </div>
 
@@ -438,29 +385,7 @@ function App() {
                 VIEW PLANS ↗
               </a>
               <div className="bento-visual">
-                <div className="hosting-status-mock">
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                    <span style={{ fontSize: '7px', color: '#64748B' }}>Server Health</span>
-                    <span style={{ fontSize: '7px', fontWeight: 'bold', color: '#10B981' }}>99.99%</span>
-                  </div>
-                  <div style={{ height: '4px', background: '#F1F5F9', borderRadius: '2px', overflow: 'hidden' }}>
-                    <div style={{ width: '90%', height: '100%', background: '#10B981' }}></div>
-                  </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px', marginTop: '6px' }}>
-                    <div style={{ background: '#F8FAFC', padding: '2px', borderRadius: '2px', textAlign: 'center' }}>
-                      <p style={{ fontSize: '5px', color: '#94A3B8' }}>CPU</p>
-                      <p style={{ fontSize: '7px', fontWeight: 'bold', color: '#1E293B' }}>12.4%</p>
-                    </div>
-                    <div style={{ background: '#F8FAFC', padding: '2px', borderRadius: '2px', textAlign: 'center' }}>
-                      <p style={{ fontSize: '5px', color: '#94A3B8' }}>RAM</p>
-                      <p style={{ fontSize: '7px', fontWeight: 'bold', color: '#1E293B' }}>38.2%</p>
-                    </div>
-                    <div style={{ background: '#F8FAFC', padding: '2px', borderRadius: '2px', textAlign: 'center' }}>
-                      <p style={{ fontSize: '5px', color: '#94A3B8' }}>SSD</p>
-                      <p style={{ fontSize: '7px', fontWeight: 'bold', color: '#1E293B' }}>44.1%</p>
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/web_hosting.webp" alt="Web Hosting" />
               </div>
             </div>
 
@@ -472,20 +397,7 @@ function App() {
                 TRY FREE ↗
               </a>
               <div className="bento-visual">
-                <div className="store-mock">
-                  <div style={{ display: 'flex', gap: '6px', height: '100%', alignItems: 'center' }}>
-                    <div style={{ width: '35px', height: '35px', background: '#FEF3C7', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <span style={{ fontSize: '14px' }}>🏺</span>
-                    </div>
-                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                      <span style={{ fontSize: '8px', fontWeight: 'bold' }}>Clay Vase</span>
-                      <span style={{ fontSize: '7px', color: '#059669' }}>$49.00</span>
-                    </div>
-                    <div style={{ width: '18px', height: '18px', background: '#059669', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '10px' }}>
-                      +
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/online_store.webp" alt="Online store" />
               </div>
             </div>
 
@@ -495,21 +407,7 @@ function App() {
               <p>Grow your business with easy and effective email marketing.</p>
               <button className="btn-bento">LEARN MORE</button>
               <div className="bento-visual">
-                <div className="email-campaign-mock">
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', height: '100%' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #F1F5F9', paddingBottom: '3px' }}>
-                      <span style={{ fontSize: '6px', color: '#94A3B8' }}>To: Subscribers</span>
-                      <span style={{ fontSize: '6px', color: '#10B981', fontWeight: '700' }}>✓ Draft</span>
-                    </div>
-                    <div style={{ background: '#FFF1F2', padding: '4px', borderRadius: '4px', display: 'flex', gap: '4px', alignItems: 'center' }}>
-                      <span style={{ fontSize: '10px' }}>🥤</span>
-                      <span style={{ fontSize: '6px', color: '#BE123C', fontWeight: 'bold' }}>Summer Launch!</span>
-                    </div>
-                    <div style={{ width: '40px', height: '10px', background: '#E2E8F0', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '5px', alignSelf: 'flex-end', marginTop: 'auto' }}>
-                      Send Campaign
-                    </div>
-                  </div>
-                </div>
+                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/email_marketing.webp" alt="Email Marketing" />
               </div>
             </div>
 
