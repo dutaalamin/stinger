@@ -444,7 +444,6 @@ function App() {
           <div className="domain-search-wrapper">
             <form className="domain-search-bar" onSubmit={handleDomainSearch}>
               <div className="domain-input-group">
-                <SearchIcon style={{ width: '18px', height: '18px', color: '#94A3B8', marginRight: '8px' }} />
                 <input
                   type="text"
                   placeholder="Start with your idea or business name"
