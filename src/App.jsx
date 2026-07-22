@@ -114,7 +114,7 @@ function App() {
         const idx = optionsList.indexOf(prev);
         return optionsList[(idx + 1) % optionsList.length];
       });
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -279,28 +279,56 @@ function App() {
 
             {/* Right Visual Floating Options */}
             <div className="hero-visual-col">
-              <div className="floating-options-stack">
+              <div className="floating-options-stack" style={{ position: 'relative', height: '340px', width: '320px' }}>
                 {[
                   { id: 'email', label: 'Send email campaigns', icon: '✉' },
                   { id: 'code', label: 'Code with AI', icon: '✦' },
                   { id: 'launch', label: 'Launch a website', icon: '💻' },
                   { id: 'wordpress', label: 'Transfer WordPress sites', icon: 'Ⓦ' },
                   { id: 'sell', label: 'Sell online', icon: '🛒' }
-                ].map((opt) => (
-                  <div
-                    key={opt.id}
-                    className={`floating-option-card ${activeHeroOption === opt.id ? 'active' : ''}`}
-                    onClick={() => setActiveHeroOption(opt.id)}
-                  >
-                    <div className="option-left-content">
-                      <span className="option-icon">{opt.icon}</span>
-                      <span>{opt.label}</span>
+                ].map((opt, i, arr) => {
+                  const activeIdx = arr.findIndex(o => o.id === activeHeroOption);
+                  let diff = i - activeIdx;
+                  if (diff < -2) diff += 5;
+                  if (diff > 2) diff -= 5;
+                  
+                  const translateY = (diff + 2) * 64; 
+                  const isAct = diff === 0;
+                  
+                  let scale = 1;
+                  let opacity = 1;
+                  let zIndex = 5;
+                  
+                  if (Math.abs(diff) === 2) { scale = 0.85; opacity = 0.3; zIndex = 1; }
+                  else if (Math.abs(diff) === 1) { scale = 0.95; opacity = 0.7; zIndex = 2; }
+                  else { scale = 1.15; opacity = 1; zIndex = 10; }
+                  
+                  return (
+                    <div
+                      key={opt.id}
+                      className={`floating-option-card ${isAct ? 'active' : ''}`}
+                      onClick={() => setActiveHeroOption(opt.id)}
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        transform: `translateY(${translateY}px) scale(${scale}) ${isAct ? 'translateX(-8px)' : ''}`,
+                        opacity: opacity,
+                        zIndex: zIndex,
+                        transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                      }}
+                    >
+                      <div className="option-left-content">
+                        <span className="option-icon">{opt.icon}</span>
+                        <span>{opt.label}</span>
+                      </div>
+                      {isAct && (
+                        <div className="checkmark-badge">✓</div>
+                      )}
                     </div>
-                    {activeHeroOption === opt.id && (
-                      <div className="checkmark-badge">✓</div>
-                    )}
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
