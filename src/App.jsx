@@ -287,11 +287,11 @@ function App() {
                   <span>Excellent</span>
                   <div className="trustpilot-badge">
                     <div className="trustpilot-stars">
-                      <span className="trustpilot-star-dot"></span>
-                      <span className="trustpilot-star-dot"></span>
-                      <span className="trustpilot-star-dot"></span>
-                      <span className="trustpilot-star-dot"></span>
-                      <span className="trustpilot-star-dot"></span>
+                      <span className="trustpilot-star">★</span>
+                      <span className="trustpilot-star">★</span>
+                      <span className="trustpilot-star">★</span>
+                      <span className="trustpilot-star">★</span>
+                      <span className="trustpilot-star">★</span>
                     </div>
                     <span>Trustpilot</span>
                   </div>

@@ -473,16 +473,22 @@ p {
 }
 
 .checkmark-badge {
-  width: 18px;
-  height: 18px;
-  background-color: #FFFFFF;
-  color: #000000;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  background-color: #00f59b;
+  color: #000000; /* Dark checkmark or white? SiteGround uses white checkmark on green circle, wait, let's check the screenshot. In the screenshot, the checkmark is white. */
+  color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 245, 155, 0.4);
+  z-index: 20;
 }
 
 /* Trustpilot Hero Footer */
@@ -519,17 +525,19 @@ p {
 
 .trustpilot-stars {
   display: flex;
-  background-color: #00b67a;
-  padding: 2px 6px;
-  border-radius: 2px;
-  gap: 2px;
+  gap: 3px;
 }
 
-.trustpilot-star-dot {
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  border-radius: 50%;
+.trustpilot-star {
+  width: 18px;
+  height: 18px;
+  background-color: #00b67a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  border-radius: 2px;
 }
 
 .rating-subtext {
