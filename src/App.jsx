@@ -114,7 +114,7 @@ function App() {
         const idx = optionsList.indexOf(prev);
         return optionsList[(idx + 1) % optionsList.length];
       });
-    }, 2000);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
@@ -316,7 +316,7 @@ function App() {
                         transform: `translateY(${translateY}px) scale(${scale}) ${isAct ? 'translateX(-8px)' : ''}`,
                         opacity: opacity,
                         zIndex: zIndex,
-                        transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                        transition: 'all 1.8s cubic-bezier(0.22, 1, 0.36, 1)'
                       }}
                     >
                       <div className="option-left-content">
