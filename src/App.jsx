@@ -28,10 +28,28 @@ const ShieldIcon = ({ className }) => (
   </svg>
 );
 
+const ShieldCheckIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    <path d="M9 11l2 2 4-4" />
+  </svg>
+);
+
 const LockIcon = ({ className }) => (
-  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
     <path d="M7 11V7a5 5 0 0110 0v4" />
+  </svg>
+);
+
+const DomainSupportIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <circle cx="12" cy="12" r="4" />
+    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />
+    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07" />
+    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93" />
+    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
   </svg>
 );
 
@@ -428,15 +446,15 @@ function App() {
           <h2 className="domain-title">Secure your domain from just $17.99/yr</h2>
           <div className="domain-benefits">
             <div className="domain-benefit-item">
-              <ShieldIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
+              <ShieldCheckIcon className="w-5 h-5" style={{ width: '16px', height: '16px' }} />
               <span>1-year Free Domain Privacy</span>
             </div>
             <div className="domain-benefit-item">
-              <LockIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
+              <LockIcon className="w-5 h-5" style={{ width: '16px', height: '16px' }} />
               <span>2-factor Authentication</span>
             </div>
             <div className="domain-benefit-item">
-              <GlobeIcon className="w-5 h-5" style={{ width: '18px', height: '18px' }} />
+              <DomainSupportIcon className="w-5 h-5" style={{ width: '16px', height: '16px' }} />
               <span>24/7 Expert Support</span>
             </div>
           </div>
