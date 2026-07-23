@@ -585,8 +585,8 @@ function App() {
             </div>
 
             {/* Right Visual Floating Options */}
-            <div className="relative h-[420px] items-center justify-end hidden lg:flex">
-              <div className="flex flex-col gap-[14px] w-[320px] z-10 relative h-[340px]">
+            <div className="relative h-[460px] items-center justify-end hidden lg:flex">
+              <div className="flex flex-col gap-[16px] w-[360px] z-10 relative h-[380px]">
                 {[
                   { id: 'email', label: 'Send email campaigns', icon: '✉' },
                   { id: 'code', label: 'Code with AI', icon: '✦' },
@@ -599,7 +599,7 @@ function App() {
                   if (diff < -2) diff += 5;
                   if (diff > 2) diff -= 5;
                   
-                  const translateY = (diff + 2) * 64; 
+                  const translateY = (diff + 2) * 76; 
                   const isAct = diff === 0;
                   
                   let scale = 1;
@@ -613,7 +613,7 @@ function App() {
                   return (
                     <div
                       key={opt.id}
-                      className={`bg-black/60 backdrop-blur-md border border-white/10 text-white/65 px-5 py-3 rounded-2xl flex items-center justify-between cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] font-medium text-[14px] hover:border-white/20 hover:text-white hover:opacity-85 ${isAct ? '!bg-black !border-white !text-white !opacity-100 !shadow-[0_20px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.15)]' : 'shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)]'}`}
+                      className={`bg-black/60 backdrop-blur-md border border-white/10 text-white/65 px-6 py-4 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] font-medium text-[15px] hover:border-white/20 hover:text-white hover:opacity-85 ${isAct ? '!bg-black !border-white !text-white !opacity-100 !shadow-[0_20px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.15)]' : 'shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)]'}`}
                       onClick={() => setActiveHeroOption(opt.id)}
                       style={{
                         position: 'absolute',
@@ -626,8 +626,8 @@ function App() {
                         transition: 'all 1.8s cubic-bezier(0.22, 1, 0.36, 1)'
                       }}
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="text-[16px]">{opt.icon}</span>
+                      <div className="flex items-center gap-3 justify-center w-full">
+                        <span className="text-[17px]">{opt.icon}</span>
                         <span>{opt.label}</span>
                       </div>
                       {isAct && (
