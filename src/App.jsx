@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import WebHosting from './pages/WebHosting';
 
@@ -344,6 +344,8 @@ function App() {
   ]);
   const [userInput, setUserInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const location = useLocation();
+  const showBanner = location.pathname === '/web-hosting';
 
   const navRef = useRef(null);
   const [navOffset, setNavOffset] = useState(0);
@@ -530,16 +532,17 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
+    <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
       {/* Top Promotion Bar */}
-      <div className="w-full bg-[#FFF9CA] text-[#121212] text-center py-2.5 text-[14px] font-bold z-[100] relative select-none">
-        Special offer: Save up to 83%
-      </div>
+      {showBanner && (
+        <div className="w-full bg-[#FFF9CA] text-[#121212] text-center py-2.5 text-[14px] font-bold z-[100] relative select-none">
+          Special offer: Save up to 83%
+        </div>
+      )}
 
       {/* Navbar / Header */}
       <header 
-        className={`absolute top-[41px] left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed !top-0 bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu || isMobileMenuOpen ? '!bg-white shadow-md' : ''}`}
+        className={`absolute ${showBanner ? 'top-[41px]' : 'top-0'} left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed !top-0 bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu || isMobileMenuOpen ? '!bg-white shadow-md' : ''}`}
         onMouseLeave={() => setHoveredMenu(null)}
       >
         <div className="w-full px-6 lg:px-12 flex justify-between items-center h-[90px]">
@@ -846,7 +849,6 @@ function App() {
         )}
       </div>
     </div>
-    </Router>
   );
 }
 
