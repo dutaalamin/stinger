@@ -30,7 +30,7 @@ function WebHosting() {
     <div className="flex flex-col min-h-screen bg-bg-dark font-sans text-text-light">
       
       {/* 1. Hero Section (SiteGround Style: Two-column banner) */}
-      <section className="relative pt-[140px] pb-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 50% 0%, #1a2a22 0%, #0d1110 60%, #0d1110 100%)' }}>
+      <section className="relative pt-[140px] min-h-[100vh] flex items-center pb-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 50% 0%, #1a2a22 0%, #0d1110 60%, #0d1110 100%)' }}>
         {/* Subtle background glow */}
         <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-[radial-gradient(circle_at_top_right,rgba(255,249,202,0.15)_0%,rgba(0,0,0,0)_60%)] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[40%] h-[50%] bg-[radial-gradient(circle_at_bottom_left,rgba(255,249,202,0.05)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
