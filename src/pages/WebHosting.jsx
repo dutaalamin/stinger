@@ -385,6 +385,174 @@ function WebHosting() {
 
         </div>
       </section>
+      {/* 4.5. Simple Website Management Section */}
+      <section className="py-24 bg-white text-[#121212] relative border-b border-black/5">
+        <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
+          
+          <div className="text-center mb-16">
+            <h2 className="text-[36px] md:text-[44px] lg:text-[48px] font-bold leading-tight tracking-tight font-sans text-[#121212] mb-4">
+              Simple website management
+            </h2>
+            <p className="text-[18px] md:text-[20px] text-[#121212]/70 font-medium">
+              Designed for business owners and tech experts
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            
+            {/* Left Column: Features List */}
+            <div className="flex flex-col gap-10">
+              
+              <div className="flex flex-col gap-3">
+                <h3 className="text-[24px] font-bold text-[#121212]">Everything in one place</h3>
+                <p className="text-[15px] md:text-[16px] text-[#121212]/70 leading-relaxed font-medium">
+                  Your domain, email, website, backups - all managed from one simple dashboard. Find what you need in seconds.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <h3 className="text-[24px] font-bold text-[#121212]">One-click actions</h3>
+                <p className="text-[15px] md:text-[16px] text-[#121212]/70 leading-relaxed font-medium">
+                  Want to add an online store? One click. Install WordPress? One click. Set up email? One click. No technical knowledge required - just point and click.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <h3 className="text-[24px] font-bold text-[#121212]">AI business automation</h3>
+                  <span className="bg-[#e0f7ea] text-[#00a86b] text-[11px] font-extrabold px-2 py-0.5 rounded-[4px] tracking-wide">NEW</span>
+                </div>
+                <p className="text-[15px] md:text-[16px] text-[#121212]/70 leading-relaxed font-medium">
+                  Manage your online presence with the power of AI. Explore our AI Studio for AI-powered business automation.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <h3 className="text-[24px] font-bold text-[#121212]">Site Tools by Stinger</h3>
+                <p className="text-[15px] md:text-[16px] text-[#121212]/70 leading-relaxed font-medium mb-2">
+                  Every site gets its own Site Tools — so you can manage, share access, and switch between sites independently, without any overlap.
+                </p>
+                <a href="#" className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#121212] tracking-wider uppercase hover:text-blue-600 transition-colors">
+                  TRY SITE TOOLS
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+
+            </div>
+
+            {/* Right Column: Visual Composition */}
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-slate-100 shadow-2xl flex items-center justify-center p-8 border border-black/5">
+              {/* Blurred Abstract Background Image */}
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
+                  alt="Abstract Background" 
+                  className="w-full h-full object-cover filter blur-[20px] scale-110 opacity-60" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#694331]/40 to-[#c19875]/40 mix-blend-overlay"></div>
+              </div>
+
+              {/* Floating Widgets & Laptop */}
+              <div className="relative z-10 w-full h-full">
+                
+                {/* Floating Profile Widget */}
+                <div className="absolute top-[20%] left-[0%] bg-white/50 backdrop-blur-md border border-white/40 p-3 rounded-2xl shadow-lg flex items-center gap-4 w-[55%] animate-float">
+                  <div className="w-10 h-10 rounded-full bg-slate-200 overflow-hidden shrink-0 border-2 border-white">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Avatar" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1 flex flex-col gap-2">
+                    <div className="w-3/4 h-2 bg-slate-800/20 rounded-full"></div>
+                    <div className="w-1/2 h-2 bg-slate-800/10 rounded-full"></div>
+                  </div>
+                  <div className="absolute -left-4 top-1/2 -translate-y-1/2">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="drop-shadow-sm"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                  </div>
+                </div>
+
+                {/* Floating Chat bubbles */}
+                <div className="absolute top-[45%] left-[-5%] bg-white/50 backdrop-blur-md border border-white/40 p-4 rounded-xl shadow-lg flex flex-col gap-3 w-[45%] animate-float-delayed">
+                  <div className="w-full h-1.5 bg-slate-800/20 rounded-full"></div>
+                  <div className="w-5/6 h-1.5 bg-slate-800/20 rounded-full"></div>
+                </div>
+
+                {/* Floating Graph Widget */}
+                <div className="absolute top-[10%] right-[0%] bg-[#1a1a1a]/90 backdrop-blur-md p-4 rounded-2xl shadow-xl w-[45%] border border-white/10 animate-float-delayed">
+                  <div className="text-white text-[18px] font-bold mb-3">+65.2%</div>
+                  <div className="w-full h-16 flex items-end gap-1 opacity-90 relative overflow-hidden rounded-md">
+                     <svg viewBox="0 0 100 40" className="absolute bottom-0 w-full h-full" preserveAspectRatio="none">
+                       <path d="M0 40 L0 30 Q10 20 20 30 T40 25 T60 35 T80 20 T100 25 L100 40 Z" fill="rgba(167, 139, 250, 0.4)" />
+                       <path d="M0 40 L0 25 Q10 15 20 25 T40 20 T60 30 T80 15 T100 20 L100 40 Z" fill="rgba(52, 211, 153, 0.6)" />
+                       <path d="M0 25 Q10 15 20 25 T40 20 T60 30 T80 15 T100 20" fill="none" stroke="#34d399" strokeWidth="2" />
+                     </svg>
+                  </div>
+                </div>
+
+                {/* Action Buttons Right Side */}
+                <div className="absolute top-[50%] right-[0%] flex flex-col gap-3 translate-y-[-50%] z-20">
+                  <div className="w-12 h-12 bg-[#332b26]/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center border border-white/5 text-white/90 hover:scale-110 transition-transform cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div className="w-12 h-12 bg-[#332b26]/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center border border-white/5 text-white/90 hover:scale-110 transition-transform cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                  </div>
+                  <div className="w-12 h-12 bg-[#332b26]/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center border border-white/5 text-white/90 hover:scale-110 transition-transform cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  </div>
+                </div>
+
+                {/* Laptop Mockup */}
+                <div className="absolute bottom-[-5%] left-1/2 -translate-x-1/2 w-[95%] z-20">
+                  <div className="bg-[#e5e5e5] p-2 rounded-t-[16px] shadow-[0_-10px_40px_rgba(0,0,0,0.3)] relative border-t border-white/50">
+                    <div className="bg-[#121212] w-full aspect-[16/10] rounded-[8px] overflow-hidden flex flex-col border-[4px] border-black relative">
+                       {/* Laptop Screen Content - Dashboard */}
+                       <div className="h-6 bg-[#1a1a1a] w-full flex items-center px-3 gap-2 border-b border-white/5 shrink-0">
+                         <div className="flex gap-1.5">
+                           <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                           <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                         </div>
+                       </div>
+                       <div className="flex-1 bg-white flex flex-col">
+                         {/* Sidebar & Header layout */}
+                         <div className="flex h-full">
+                           <div className="w-[25%] bg-[#121212] h-full flex flex-col p-3 gap-4 border-r border-white/10">
+                              <div className="w-16 h-3 bg-white/20 rounded"></div>
+                              <div className="flex flex-col gap-2 mt-4">
+                                <div className="w-full h-2 bg-[#FFF9CA]/80 rounded"></div>
+                                <div className="w-5/6 h-2 bg-white/10 rounded"></div>
+                                <div className="w-full h-2 bg-white/10 rounded"></div>
+                                <div className="w-4/5 h-2 bg-white/10 rounded"></div>
+                                <div className="w-full h-2 bg-white/10 rounded"></div>
+                              </div>
+                           </div>
+                           <div className="flex-1 bg-[#f9fafb] p-4 flex flex-col gap-4">
+                             <div className="grid grid-cols-3 grid-rows-3 gap-3 h-full">
+                               {[...Array(9)].map((_, i) => (
+                                 <div key={i} className="bg-white border border-slate-200 rounded-lg shadow-sm p-2 flex flex-col items-center justify-center gap-2">
+                                   <div className="w-6 h-6 rounded bg-slate-100 flex items-center justify-center text-slate-400">
+                                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                   </div>
+                                   <div className="w-10 h-1.5 bg-slate-200 rounded-full"></div>
+                                 </div>
+                               ))}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+                  {/* Laptop Base */}
+                  <div className="w-[110%] -ml-[5%] h-5 bg-[#d4d4d4] rounded-b-[8px] shadow-[0_20px_30px_rgba(0,0,0,0.4)] relative border-b border-black/20 flex flex-col items-center justify-start">
+                    <div className="w-[20%] h-1 bg-[#a3a3a3] rounded-b-md mt-0"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* 5. WordPress Focus Section */}
       <section className="py-24 bg-[#1a1a1a] relative overflow-hidden">
