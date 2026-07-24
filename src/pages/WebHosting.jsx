@@ -178,13 +178,13 @@ function WebHosting() {
               <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">For personal projects & small sites</p>
               
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$17.99</span>
-                <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
+                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$17.99</span>
+                <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
               </div>
               <div className="flex items-end mb-6">
-                <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
-                <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">2.99</span>
-                <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
+                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">2.99</span>
+                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
               </div>
               
               <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
@@ -261,13 +261,13 @@ function WebHosting() {
                 <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">Perfect for your growing business</p>
                 
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$29.99</span>
-                  <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
+                  <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$29.99</span>
+                  <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
                 </div>
                 <div className="flex items-end mb-6">
-                  <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
-                  <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">4.99</span>
-                  <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
+                  <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                  <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">4.99</span>
+                  <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
                 </div>
                 
                 <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
@@ -351,13 +351,13 @@ function WebHosting() {
               <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">More power & features for big sites</p>
               
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$44.99</span>
-                <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 82%</div>
+                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$44.99</span>
+                <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 82%</div>
               </div>
               <div className="flex items-end mb-6">
-                <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
-                <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">7.99</span>
-                <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
+                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">7.99</span>
+                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
               </div>
               
               <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
