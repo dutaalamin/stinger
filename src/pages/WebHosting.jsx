@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function WebHosting() {
+  const [activeSecurityTab, setActiveSecurityTab] = useState(0);
+
+  const securityFeatures = [
+    {
+      title: "Advanced anti-bot & DDoS protection",
+      content: "Malicious bots and DDoS attacks can overwhelm websites and drive away visitors. Our smart AI recognizes and blocks fake traffic, so only real customers get through. We stop over 1 million attacks per day, automatically."
+    },
+    {
+      title: "Free SSL certificate included",
+      content: "Secure your website and build trust with your visitors. Every hosting plan includes a free SSL certificate that is automatically installed and renewed."
+    },
+    {
+      title: "Automatic Daily Backups",
+      content: "Never lose your hard work. We automatically back up your website every day and keep copies for up to 30 days, so you can easily restore your site with a single click."
+    },
+    {
+      title: "Proactive monitoring & instant fixes",
+      content: "Our system monitors your website 24/7. If an issue is detected, our automated systems and expert team jump in to fix it instantly, often before you even notice."
+    },
+    {
+      title: "Extra WordPress protection",
+      content: "We protect your WordPress site at the server level, automatically updating core files and patching vulnerabilities to keep hackers out."
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-bg-dark font-sans text-text-light">
       
@@ -554,68 +579,109 @@ function WebHosting() {
         </div>
       </section>
 
-      {/* 5. WordPress Focus Section */}
-      <section className="py-24 bg-[#1a1a1a] relative overflow-hidden">
-        <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
-          <div className="flex-1 w-full order-2 lg:order-1 relative">
-            <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-              <div className="absolute inset-0 bg-[#FFF9CA]/5 rounded-full blur-3xl"></div>
-              <div className="relative z-10 w-full h-full bg-black/40 border border-white/10 rounded-[32px] p-8 shadow-2xl backdrop-blur-sm flex items-center justify-center">
-                 {/* WordPress Logo Mockup SVG */}
-                 <svg width="200" height="200" viewBox="0 0 24 24" fill="#FFF9CA" className="opacity-90">
-                    <path d="M12.158,12.786l-2.698,7.84c.806.236,1.657.365,2.54.365,1.047,0,2.05-.18,2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.572ZM12,2c5.523,0,10,4.477,10,10,0,5.522-4.477,10-10,10S2,17.522,2,12C2,6.477,6.477,2,12,2Zm5.748,8.21c0-1.046-.437-1.847-.791-2.483C16.488,6.869,16.039,6,16.039,5.016c0-1.154.912-2.213,2.23-2.213.064,0,.127.004.189.011-2.316-1.572-5.185-2.29-8.156-2.029C8.368.966,6.602,1.688,5.161,2.894l6.096,16.326,3.626-9.845c.44-.925.865-1.156,1.442-1.166ZM3.811,12c0-.765.105-1.503.298-2.214l3.149,8.55C5.076,16.634,3.811,14.453,3.811,12Zm11.835,6.591.246-.723L18.423,10.6c.205.819.317,1.674.317,2.553,0,2.231-.762,4.288-2.094,5.938Z"/>
-                 </svg>
+      {/* 5. Security Section */}
+      <section className="py-24 bg-white text-[#121212] relative overflow-hidden">
+        <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
+          
+          <div className="text-center mb-16">
+            <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-bold leading-tight tracking-tight font-sans text-[#121212]">
+              Keep your website, data, and business safe, automatically
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            
+            {/* Left Column: Accordion */}
+            <div className="flex flex-col border-t border-black/10">
+              {securityFeatures.map((feature, index) => (
+                <div key={index} className="border-b border-black/10">
+                  <button 
+                    onClick={() => setActiveSecurityTab(activeSecurityTab === index ? -1 : index)}
+                    className="w-full py-6 flex items-center justify-between text-left cursor-pointer hover:text-green-700 transition-colors bg-transparent border-none outline-none"
+                  >
+                    <span className="text-[20px] md:text-[22px] font-bold text-[#121212]">{feature.title}</span>
+                    <svg 
+                      width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                      className={`text-[#121212] transition-transform duration-300 ${activeSecurityTab === index ? 'rotate-180' : ''}`}
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+                  <div 
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${activeSecurityTab === index ? 'max-h-[300px] pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
+                  >
+                    <p className="text-[15px] text-[#121212]/70 leading-relaxed m-0 pr-8">
+                      {feature.content}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Column: Visual Composition */}
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-[#78b398] flex items-center justify-center p-8 shadow-2xl shadow-green-900/20">
+              
+              {/* Radar Rings Background */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="absolute w-[150%] h-[150%] bg-[conic-gradient(from_0deg_at_50%_50%,rgba(0,0,0,0)_0deg,rgba(0,168,107,0.3)_180deg,rgba(0,0,0,0)_360deg)] animate-[spin_8s_linear_infinite] origin-center rounded-full mix-blend-overlay"></div>
+                 <div className="w-full aspect-square border-[2px] border-black/5 rounded-full absolute mix-blend-overlay shadow-[inset_0_0_50px_rgba(0,100,50,0.4)]"></div>
+                 <div className="w-[70%] aspect-square border-[2px] border-black/5 rounded-full absolute mix-blend-overlay shadow-[inset_0_0_50px_rgba(0,100,50,0.5)]"></div>
+                 <div className="w-[40%] aspect-square border-[2px] border-black/5 rounded-full absolute mix-blend-overlay shadow-[inset_0_0_50px_rgba(0,100,50,0.6)]"></div>
+                 <div className="w-[10%] aspect-square bg-[#0b2217] rounded-full absolute shadow-[0_0_20px_#0b2217]"></div>
               </div>
-              {/* Decorative tags */}
-              <div className="absolute top-[10%] right-[0%] bg-[#121212] border border-white/20 text-[#FFF9CA] font-bold px-4 py-2 rounded-lg shadow-xl text-[14px]">Managed WP</div>
-              <div className="absolute bottom-[20%] left-[-5%] bg-stinger-green border border-white/20 text-bg-dark font-bold px-4 py-2 rounded-lg shadow-xl text-[14px]">Auto Updates</div>
+
+              {/* Floating Security Badges */}
+              <div className="relative z-10 w-full h-full">
+                 
+                 {/* Badge 1 */}
+                 <div className="absolute top-[25%] left-[5%] bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-3 shadow-lg flex items-center gap-3 animate-float">
+                    <div className="bg-white rounded-lg p-2 shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><rect x="9" y="11" width="6" height="4" rx="1"></rect><line x1="12" y1="9" x2="12" y2="11"></line></svg>
+                    </div>
+                    <span className="text-white font-medium pr-2">Scanning...</span>
+                    {/* Targeting reticle effect */}
+                    <div className="absolute inset-0 border border-white/20 rounded-xl scale-110">
+                      <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-white/50"></div>
+                      <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-white/50"></div>
+                      <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b border-l border-white/50"></div>
+                      <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-white/50"></div>
+                    </div>
+                 </div>
+
+                 {/* Badge 2 */}
+                 <div className="absolute top-[40%] right-[5%] bg-[#0b2217]/60 backdrop-blur-md border border-[#0b2217]/50 rounded-xl p-3 shadow-2xl flex items-center gap-3 animate-float-delayed z-20">
+                    <div className="bg-white rounded-lg p-2 shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><rect x="9" y="11" width="6" height="4" rx="1"></rect><line x1="12" y1="9" x2="12" y2="11"></line></svg>
+                    </div>
+                    <span className="text-white font-medium pr-2">Scanning...</span>
+                    {/* Targeting reticle effect */}
+                    <div className="absolute inset-0 border border-white/10 rounded-xl scale-110">
+                      <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-white/30"></div>
+                      <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-white/30"></div>
+                      <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b border-l border-white/30"></div>
+                      <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-white/30"></div>
+                    </div>
+                 </div>
+
+                 {/* Badge 3 */}
+                 <div className="absolute bottom-[20%] left-[20%] bg-black/70 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl flex items-center gap-3 animate-float z-30">
+                    <div className="bg-white rounded-lg p-2 shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><rect x="9" y="11" width="6" height="4" rx="1"></rect><line x1="12" y1="9" x2="12" y2="11"></line></svg>
+                    </div>
+                    <span className="text-white font-medium pr-2">Scanning...</span>
+                    {/* Targeting reticle effect */}
+                    <div className="absolute inset-0 border border-white/10 rounded-xl scale-110">
+                      <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-white/30"></div>
+                      <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-white/30"></div>
+                      <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b border-l border-white/30"></div>
+                      <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-white/30"></div>
+                    </div>
+                 </div>
+
+              </div>
+
             </div>
           </div>
-          <div className="flex-1 w-full order-1 lg:order-2 text-center lg:text-left">
-            <h2 className="text-[32px] md:text-[40px] text-white font-bold mb-6 font-sans tracking-tight">Managed WordPress Hosting</h2>
-            <p className="text-[18px] text-white/60 mb-8 font-medium leading-relaxed">
-              Experience hassle-free WordPress with our managed service. We handle the technical stuff so you can focus on building your brand.
-            </p>
-            <ul className="flex flex-col gap-4 text-left mx-auto max-w-[500px] lg:mx-0">
-              <li className="flex items-center gap-3 text-[16px] text-white/90">
-                <div className="w-6 h-6 rounded-full bg-[#FFF9CA]/20 flex items-center justify-center shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                Automated WordPress installation
-              </li>
-              <li className="flex items-center gap-3 text-[16px] text-white/90">
-                <div className="w-6 h-6 rounded-full bg-[#FFF9CA]/20 flex items-center justify-center shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                Free WordPress Migrator tool
-              </li>
-              <li className="flex items-center gap-3 text-[16px] text-white/90">
-                <div className="w-6 h-6 rounded-full bg-[#FFF9CA]/20 flex items-center justify-center shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                Managed auto-updates for core and plugins
-              </li>
-              <li className="flex items-center gap-3 text-[16px] text-white/90">
-                <div className="w-6 h-6 rounded-full bg-[#FFF9CA]/20 flex items-center justify-center shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                Expert WordPress support 24/7
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CTA Section */}
-      <section className="py-24 bg-[url('/stinger_hero_bg.png')] bg-cover bg-center relative">
-        <div className="absolute inset-0 bg-[#FFF9CA]/95 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#121212] to-transparent opacity-90"></div>
-        <div className="w-full max-w-[800px] mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-[36px] md:text-[48px] text-white font-bold mb-6 font-sans tracking-tight">Ready to launch your website?</h2>
-          <p className="text-[20px] text-white/80 mb-10 font-medium">Join over 2.8 million domain owners who trust us with their websites.</p>
-          <button className="px-10 py-5 rounded-full bg-white text-[#121212] font-black text-[18px] uppercase tracking-wider transition-all hover:scale-105 shadow-[0_10px_30px_rgba(0,0,0,0.3)] border-none cursor-pointer">
-            Get Started Now
-          </button>
         </div>
       </section>
 
