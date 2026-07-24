@@ -226,7 +226,7 @@ function WebHosting() {
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">SiteGround Website Builder</div>
+              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
                   <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
@@ -309,7 +309,7 @@ function WebHosting() {
                   ))}
                 </ul>
 
-                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">SiteGround Website Builder</div>
+                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
                 <ul className="flex flex-col gap-3 mb-6">
                   {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
                     <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
@@ -399,7 +399,7 @@ function WebHosting() {
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">SiteGround Website Builder</div>
+              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
                   <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
