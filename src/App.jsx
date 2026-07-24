@@ -82,6 +82,21 @@ const StarIcon = ({ className }) => (
   </svg>
 );
 
+const MenuIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
+);
+
+const CloseIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);
+
 const MegamenuContent = ({ activeMenu, navOffset = 0 }) => {
   if (!activeMenu || !['Web Hosting', 'WordPress', 'AI', 'Website Building', 'About'].includes(activeMenu)) return null;
 
@@ -312,6 +327,8 @@ const MegamenuContent = ({ activeMenu, navOffset = 0 }) => {
 };
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeMobileAccordion, setActiveMobileAccordion] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [hideNavbar, setHideNavbar] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
@@ -517,7 +534,7 @@ function App() {
       <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
       {/* Navbar / Header */}
       <header 
-        className={`absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu ? '!bg-white shadow-md' : ''}`}
+        className={`absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu || isMobileMenuOpen ? '!bg-white shadow-md' : ''}`}
         onMouseLeave={() => setHoveredMenu(null)}
       >
         <div className="w-full px-6 lg:px-12 flex justify-between items-center h-[90px]">
@@ -527,14 +544,14 @@ function App() {
             <span>Stinger</span>
           </Link>
           
-          {/* Center: Main Navigation Menu */}
+          {/* Center: Main Navigation Menu (Desktop) */}
           <ul ref={navRef} className="hidden lg:flex list-none items-center h-full gap-2 xl:gap-4 m-0 p-0">
             {['Web Hosting', 'WordPress', 'AI', 'Website Building', 'Ecommerce', 'Email Marketing', 'Domains'].map(item => {
               const showChevron = ['Web Hosting', 'WordPress', 'AI', 'Website Building'].includes(item);
               const isHovered = hoveredMenu === item;
               
               let textColorClass = "text-white/90";
-              if (hoveredMenu) {
+              if (hoveredMenu || isMobileMenuOpen) {
                 textColorClass = isHovered ? "text-[#e6c800]" : "text-[#4a4a4a]";
               }
               
@@ -552,22 +569,94 @@ function App() {
             })}
           </ul>
 
-          {/* Right: Actions (About dropdown & Login button) */}
+          {/* Right: Actions (About dropdown & Login button) & Mobile Menu Toggle */}
           <div className="flex items-center gap-4 h-full">
-            <div className="h-full flex items-center" onMouseEnter={() => setHoveredMenu('About')}>
-              <a href="#" className={`no-underline font-bold text-[14px] xl:text-[15px] transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap h-full px-3 relative ${hoveredMenu === 'About' ? 'text-[#e6c800]' : (hoveredMenu ? 'text-[#4a4a4a]' : 'text-white/90')} hover:text-[#e6c800] hidden lg:flex`}>
+            <div className="h-full items-center hidden lg:flex" onMouseEnter={() => setHoveredMenu('About')}>
+              <a href="#" className={`no-underline font-bold text-[14px] xl:text-[15px] transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap h-full px-3 relative ${hoveredMenu === 'About' ? 'text-[#e6c800]' : (hoveredMenu || isMobileMenuOpen ? 'text-[#4a4a4a]' : 'text-white/90')} hover:text-[#e6c800]`}>
                 <span>About</span>
                 <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${hoveredMenu === 'About' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
               </a>
             </div>
-            <a href="#" className={`font-bold text-[14px] xl:text-[15px] px-6 py-2.5 rounded-full transition-all duration-300 whitespace-nowrap inline-block text-center no-underline border ${hoveredMenu ? 'bg-transparent text-[#1a1a1a] border-slate-300 hover:bg-slate-50' : 'text-bg-dark bg-[#FFF9CA] border-transparent hover:bg-[#FFFBEB]'}`}>
+            <a href="#" className={`font-bold text-[14px] xl:text-[15px] px-6 py-2.5 rounded-full transition-all duration-300 whitespace-nowrap inline-block text-center no-underline border ${hoveredMenu || isMobileMenuOpen ? 'bg-transparent text-[#1a1a1a] border-slate-300 hover:bg-slate-50' : 'text-bg-dark bg-[#FFF9CA] border-transparent hover:bg-[#FFFBEB]'}`}>
               Login
             </a>
+            <button 
+              className={`lg:hidden flex items-center justify-center w-10 h-10 rounded-full transition-colors ${hoveredMenu || isMobileMenuOpen ? 'text-[#1a1a1a] hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+            </button>
           </div>
         </div>
 
-        {/* Megamenu Container */}
-        {hoveredMenu && <MegamenuContent activeMenu={hoveredMenu} navOffset={navOffset} />}
+        {/* Megamenu Container (Desktop) */}
+        {hoveredMenu && !isMobileMenuOpen && <MegamenuContent activeMenu={hoveredMenu} navOffset={navOffset} />}
+
+        {/* Mobile Menu Drawer */}
+        <div className={`lg:hidden fixed top-[90px] left-0 w-full h-[calc(100vh-90px)] bg-white transform transition-transform duration-300 ease-in-out overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col p-6 gap-4">
+            {['Web Hosting', 'WordPress', 'AI', 'Website Building', 'Ecommerce', 'Email Marketing', 'Domains', 'About'].map((item) => {
+              const hasSubmenu = ['Web Hosting', 'WordPress', 'AI', 'Website Building', 'About'].includes(item);
+              const isActive = activeMobileAccordion === item;
+              
+              return (
+                <div key={item} className="flex flex-col border-b border-slate-100 last:border-0 pb-4">
+                  <div 
+                    className="flex justify-between items-center cursor-pointer py-2"
+                    onClick={() => hasSubmenu ? setActiveMobileAccordion(isActive ? null : item) : null}
+                  >
+                    <span className={`font-bold text-[18px] transition-colors ${isActive ? 'text-[#e6c800]' : 'text-[#1a1a1a]'}`}>{item}</span>
+                    {hasSubmenu && (
+                      <svg className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${isActive ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    )}
+                  </div>
+                  
+                  {/* Mobile Submenu Accordion Content */}
+                  {hasSubmenu && isActive && (
+                    <div className="mt-4 flex flex-col gap-4 pl-2 animate-in slide-in-from-top-2 fade-in duration-200">
+                      {item === 'Web Hosting' && (
+                        <>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Web Hosting</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Agency Program</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Hosting for WordPress</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Reseller Hosting</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Cloud Hosting</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Affiliate Program</a>
+                        </>
+                      )}
+                      {item === 'WordPress' && (
+                        <>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Hosting for WordPress</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Hosting for WooCommerce</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Agency Program</a>
+                        </>
+                      )}
+                      {item === 'AI' && (
+                        <>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">AI Studio</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Coderick AI</a>
+                        </>
+                      )}
+                      {item === 'Website Building' && (
+                        <>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Website Builder</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Coderick AI</a>
+                        </>
+                      )}
+                      {item === 'About' && (
+                        <>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">About Stinger</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Our Blog</a>
+                          <a href="#" className="text-[#4a4a4a] hover:text-[#e6c800] text-[15px] font-medium py-1">Knowledge base</a>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </header>
 
       <main className="flex-1">
