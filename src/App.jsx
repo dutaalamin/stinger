@@ -532,9 +532,14 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
+      {/* Top Promotion Bar */}
+      <div className="w-full bg-[#00d285] text-[#121212] text-center py-2.5 text-[14px] font-bold z-[100] relative select-none">
+        Special offer: Save up to 83%
+      </div>
+
       {/* Navbar / Header */}
       <header 
-        className={`absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu || isMobileMenuOpen ? '!bg-white shadow-md' : ''}`}
+        className={`absolute top-[41px] left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed !top-0 bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu || isMobileMenuOpen ? '!bg-white shadow-md' : ''}`}
         onMouseLeave={() => setHoveredMenu(null)}
       >
         <div className="w-full px-6 lg:px-12 flex justify-between items-center h-[90px]">
