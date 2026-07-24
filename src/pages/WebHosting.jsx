@@ -174,24 +174,24 @@ function WebHosting() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12 w-full">
             {/* Plan 1: StartUp */}
             <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-10 pt-12">
-              <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">StartUp</h3>
-              <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">For personal projects & small sites</p>
+              <h3 className="text-[32px] font-medium text-[#121212] mb-3 font-sans">StartUp</h3>
+              <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">For personal projects & small sites</p>
               
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$17.99</span>
-                <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
+                <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$17.99</span>
+                <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
               </div>
               <div className="flex items-end mb-6">
-                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
-                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">2.99</span>
-                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+                <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
+                <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">2.99</span>
+                <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
               </div>
               
-              <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+              <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
                 SELECT PLAN
               </button>
               
-              <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+              <div className="text-[13px] text-[#121212]/50 font-medium text-center mb-8">
                 Renews at $17.99/mo. Prepaid for 12 months. Ex. VAT
               </div>
               
@@ -199,82 +199,82 @@ function WebHosting() {
               
               <ul className="flex flex-col gap-3 mb-6">
                 {['Host 1 website with unlimited traffic', '10 GB Premium Google storage'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={i} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
               
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
-                  <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`core-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
-                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                  <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  Free AI tokens <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                  <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  Free AI tokens <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                 </li>
                 {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
-                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
-                  <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`builder-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
               <ul className="flex flex-col gap-3 flex-1">
                 {['Free site migrations', 'Managed autoupdates', 'WP-CLI and SSH'].map((feature, i) => (
-                  <li key={`wp-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`wp-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
-                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                  <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  AI Agent for WordPress <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                  <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  AI Agent for WordPress <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                 </li>
               </ul>
             </div>
 
             {/* Plan 2: GrowBig (Highlighted) */}
             <div className="bg-white border-[3px] border-[#FFF9CA] rounded-2xl shadow-[0_8px_30px_rgba(255,249,202,0.4)] flex flex-col relative overflow-hidden transform md:-translate-y-4">
-              <div className="w-full bg-[#FFF9CA] text-[#121212] text-center py-2.5 text-[12px] font-black uppercase tracking-widest">
+              <div className="w-full bg-[#FFF9CA] text-[#121212] text-center py-3 text-[13px] font-black uppercase tracking-widest">
                 Best Value
               </div>
               <div className="p-10 pt-10 flex flex-col flex-1">
-                <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GrowBig</h3>
-                <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">Perfect for your growing business</p>
+                <h3 className="text-[32px] font-medium text-[#121212] mb-3 font-sans">GrowBig</h3>
+                <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">Perfect for your growing business</p>
                 
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$29.99</span>
-                  <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
+                  <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$29.99</span>
+                  <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
                 </div>
                 <div className="flex items-end mb-6">
-                  <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
-                  <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">4.99</span>
-                  <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+                  <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
+                  <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">4.99</span>
+                  <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
                 </div>
                 
-                <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+                <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
                   SELECT PLAN
                 </button>
                 
-                <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+                <div className="text-[13px] text-[#121212]/50 font-medium text-center mb-8">
                   Renews at $29.99/mo. Prepaid for 12 months. Ex. VAT
                 </div>
                 
@@ -282,62 +282,62 @@ function WebHosting() {
                 
                 <ul className="flex flex-col gap-3 mb-6">
                   {['Unlimited websites, unlimited traffic', '50 GB Premium Google storage'].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={i} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
+                <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
                 <ul className="flex flex-col gap-3 mb-6">
                   {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
-                    <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={`core-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
-                  <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                    Free AI tokens <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                  <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    Free AI tokens <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                   </li>
                   {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
-                    <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={`core2-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
+                <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
                 <ul className="flex flex-col gap-3 mb-6">
                   {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
-                    <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={`builder-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
+                <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
                 <ul className="flex flex-col gap-3 mb-6">
                   {['Free site migrations', 'Managed autoupdates', 'WP-CLI and SSH'].map((feature, i) => (
-                    <li key={`wp-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={`wp-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
-                  <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                    AI Agent for WordPress <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                  <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    AI Agent for WordPress <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                   </li>
                 </ul>
 
-                <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Exclusive Features</div>
+                <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Exclusive Features</div>
                 <ul className="flex flex-col gap-3 flex-1">
                   {['On-demand backups', '30% faster PHP', 'Staging'].map((feature, i) => (
-                    <li key={`excl-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                      <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <li key={`excl-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                      <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                       {feature}
                     </li>
                   ))}
@@ -347,24 +347,24 @@ function WebHosting() {
 
             {/* Plan 3: GoGeek */}
             <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-10 pt-12">
-              <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GoGeek</h3>
-              <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">More power & features for big sites</p>
+              <h3 className="text-[32px] font-medium text-[#121212] mb-3 font-sans">GoGeek</h3>
+              <p className="text-[15px] text-[#121212]/70 mb-8 font-medium">More power & features for big sites</p>
               
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$44.99</span>
-                <div className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 82%</div>
+                <span className="text-[15px] text-[#121212]/60 line-through font-semibold">$44.99</span>
+                <div className="text-[12px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 82%</div>
               </div>
               <div className="flex items-end mb-6">
-                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
-                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">7.99</span>
-                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+                <span className="text-[28px] text-[#121212] font-bold mb-2 mr-0.5">$</span>
+                <span className="text-[64px] text-[#121212] font-bold leading-none tracking-tight">7.99</span>
+                <span className="text-[16px] text-[#121212]/60 font-semibold mb-3 ml-1">/mo.</span>
               </div>
               
-              <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+              <button className="w-full py-4 rounded-full font-bold text-[15px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-5">
                 SELECT PLAN
               </button>
               
-              <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+              <div className="text-[13px] text-[#121212]/50 font-medium text-center mb-8">
                 Renews at $44.99/mo. Prepaid for 12 months. Ex. VAT
               </div>
               
@@ -372,62 +372,62 @@ function WebHosting() {
               
               <ul className="flex flex-col gap-3 mb-6">
                 {['Unlimited websites, unlimited traffic', '100 GB Premium Google storage'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={i} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
               
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Core Features</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
-                  <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`core-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
-                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                  <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  Free AI tokens <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                  <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  Free AI tokens <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                 </li>
                 {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
-                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Stinger Website Builder</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Easy site building', 'AI image generation', 'AI text generation', 'Professional templates', 'Free image gallery', 'Built-in SEO'].map((feature, i) => (
-                  <li key={`builder-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`builder-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">WordPress Service</div>
               <ul className="flex flex-col gap-3 mb-6">
                 {['Free site migrations', 'Managed autoupdates', 'WP-CLI and SSH'].map((feature, i) => (
-                  <li key={`wp-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`wp-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
-                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
-                  <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  AI Agent for WordPress <span className="text-[10px] text-[#121212] font-extrabold bg-[#FFF9CA] px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                <li className="flex items-center gap-3 text-[15px] text-[#121212]/80 font-medium">
+                  <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  AI Agent for WordPress <span className="text-[11px] text-[#121212] font-extrabold bg-[#FFF9CA] px-2 py-0.5 rounded-[4px] ml-1">NEW</span>
                 </li>
               </ul>
 
-              <div className="text-[13px] font-bold text-[#121212] mb-4 mt-2">Exclusive Features</div>
+              <div className="text-[15px] font-bold text-[#121212] mb-4 mt-2">Exclusive Features</div>
               <ul className="flex flex-col gap-3 flex-1">
                 {['On-demand backups', '30% faster PHP', 'Staging + Git', 'Private DNS', 'White-label access', 'Priority support'].map((feature, i) => (
-                  <li key={`excl-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
-                    <div className="w-[15px] h-[15px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <li key={`excl-${i}`} className="flex items-start gap-3 text-[15px] text-[#121212]/80 font-medium">
+                    <div className="w-[17px] h-[17px] rounded-full bg-[#FFF9CA] flex items-center justify-center shrink-0 mt-0.5"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                     {feature}
                   </li>
                 ))}
