@@ -227,82 +227,86 @@ function WebHosting() {
         </div>
       </section>
 
-      {/* 3. Features Section (Speed & Security Focus) */}
+      {/* 3. Host Here, Succeed Everywhere Section (SiteGround Style) */}
       <section className="py-24 bg-[#121212] relative border-b border-white/5">
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[40px] text-white font-bold mb-4 font-sans tracking-tight">Crafted for Easy Website Management</h2>
-            <p className="text-[18px] text-white/60 max-w-[700px] mx-auto font-medium">
-              We provide tools and features that make launching and managing your website a breeze.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Feature 1 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Free Domain Name</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                Get your website off the ground with a free domain for the first year on our Pro and Elite plans.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column: Visual & Headline */}
+            <div className="flex flex-col gap-6 text-center lg:text-left">
+              <h2 className="text-[36px] md:text-[44px] lg:text-[48px] text-white font-extrabold leading-tight font-sans tracking-tight">
+                Host here, succeed everywhere
+              </h2>
+              <p className="text-[18px] text-white/70 max-w-[500px] mx-auto lg:mx-0 leading-relaxed font-medium">
+                We take care of the technical stuff. You take care of your customers.
               </p>
+              {/* Visual Mockup */}
+              <div className="mt-6 relative w-full aspect-video max-w-[500px] mx-auto lg:mx-0 bg-black/40 border border-white/10 rounded-[24px] overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Host Here, Succeed Everywhere" 
+                  className="w-full h-full object-cover opacity-80 filter brightness-95" 
+                />
+              </div>
             </div>
 
-            {/* Feature 2 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
+            {/* Right Column: Features List */}
+            <div className="flex flex-col gap-8">
+              
+              {/* Feature 1 */}
+              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-[20px] font-bold text-white m-0">Start a new site with a click</h4>
+                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                    Create your perfect website effortlessly with our automated site wizard and free installation of WordPress or other CMS.
+                  </p>
+                </div>
               </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Free SSL Certificates</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                Protect your visitors and boost your SEO with Let&apos;s Encrypt SSL certificates automatically installed.
-              </p>
+
+              {/* Feature 2 */}
+              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-[20px] font-bold text-white m-0">Move your existing site</h4>
+                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                    Already have a website? Let our experts transfer it for you or use our automatic migrator for WordPress sites. Avoid downtime, stress, and extra costs. Your site stays live the entire time.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-[20px] font-bold text-white m-0">Get professional business email</h4>
+                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                    Build credibility with unlimited email accounts at your own domain, including free spam protection and webmail.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="flex gap-5 items-start">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h4 className="text-[20px] font-bold text-white m-0">Start selling online anytime</h4>
+                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                    Start your online shop with a free installation of the shopping cart of your choice and enjoy free features such as SSL, daily backups and more.
+                  </p>
+                </div>
+              </div>
+
             </div>
 
-            {/* Feature 3 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-              </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Daily Backups</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                We keep daily backups of your data. Restore your website with a single click in case of accidents.
-              </p>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Ultrafast Performance</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                Built on premium Google Cloud infrastructure with custom PHP setup for unmatched speed.
-              </p>
-            </div>
-
-            {/* Feature 5 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Top-Notch Security</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                Smart WAF, AI anti-bot system, and advanced DDoS protection keep your site safe from threats.
-              </p>
-            </div>
-
-            {/* Feature 6 */}
-            <div className="flex flex-col gap-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] group-hover:bg-[#FFF9CA] group-hover:text-black transition-colors duration-300">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="M10 4v4"></path><path d="M2 8h20"></path><path d="M6 4v4"></path></svg>
-              </div>
-              <h4 className="text-[20px] font-bold text-white m-0">Free Email</h4>
-              <p className="text-[15px] text-white/60 leading-relaxed m-0">
-                Create professional email addresses with your domain name at no extra cost.
-              </p>
-            </div>
           </div>
         </div>
       </section>
