@@ -5,13 +5,10 @@ function WebHosting() {
     <div className="flex flex-col min-h-screen bg-bg-dark font-sans text-text-light">
       
       {/* 1. Hero Section (SiteGround Style: Two-column banner) */}
-      <section className="relative pt-[180px] pb-16 overflow-hidden bg-[#121212]">
+      <section className="relative pt-[140px] pb-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 50% 0%, #1a2a22 0%, #0d1110 60%, #0d1110 100%)' }}>
         {/* Subtle background glow */}
-        <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-[radial-gradient(circle_at_top_right,rgba(0,210,133,0.08)_0%,rgba(0,0,0,0)_60%)] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[40%] h-[50%] bg-[radial-gradient(circle_at_bottom_left,rgba(255,249,202,0.03)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
-        
-        {/* Large transparent % in background */}
-        <div className="absolute right-[10%] bottom-[10%] text-[400px] font-black text-white/[0.02] select-none pointer-events-none leading-none z-0 hidden lg:block">%</div>
+        <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-[radial-gradient(circle_at_top_right,rgba(0,210,133,0.15)_0%,rgba(0,0,0,0)_60%)] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[40%] h-[50%] bg-[radial-gradient(circle_at_bottom_left,rgba(0,210,133,0.05)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
 
         <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -19,11 +16,11 @@ function WebHosting() {
             {/* Left Content */}
             <div className="text-left flex flex-col items-start">
               {/* Green Discount Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-[4px] bg-[#00d285]/20 text-[#00d285] text-[12px] font-extrabold mb-6 tracking-wider">
+              <div className="inline-flex items-center px-3 py-1 rounded-[2px] bg-[#00d285] text-[#121212] text-[12px] font-black mb-6 uppercase tracking-widest">
                 SAVE UP TO 83%
               </div>
               
-              <h1 className="text-[40px] md:text-[52px] lg:text-[62px] text-white font-extrabold leading-[1.15] tracking-tight mb-8 font-sans">
+              <h1 className="text-[40px] md:text-[52px] lg:text-[62px] text-white font-bold leading-[1.1] tracking-tight mb-8 font-sans" style={{ letterSpacing: '-0.03em' }}>
                 Web hosting built <br />
                 for your success
               </h1>
@@ -93,18 +90,25 @@ function WebHosting() {
                 </div>
               </div>
 
-              {/* Generated Entrepreneur Image */}
-              <div className="absolute right-0 bottom-0 w-[78%] h-full z-10 flex items-end">
+              {/* Generated Entrepreneur Image with Mask */}
+              <div className="absolute right-[-5%] bottom-[-5%] w-[85%] h-[110%] z-10 flex items-end">
                 <img 
                   src="/stinger_hero_person.png" 
                   alt="Business Owner" 
-                  className="w-full h-auto max-h-[480px] object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] filter brightness-95" 
+                  className="w-full h-full object-contain filter brightness-95" 
+                  style={{ 
+                    WebkitMaskImage: 'radial-gradient(circle at 60% 50%, black 30%, transparent 70%)',
+                    maskImage: 'radial-gradient(circle at 60% 50%, black 30%, transparent 70%)'
+                  }}
                 />
               </div>
 
               {/* Mint stamp badge with % */}
-              <div className="absolute left-[38%] top-[32%] w-20 h-20 bg-[#00d285] rounded-full flex items-center justify-center text-black font-black text-[36px] shadow-[0_10px_30px_rgba(0,210,133,0.4)] border-4 border-[#121212] z-20 animate-pulse select-none" style={{ borderRadius: '50% 50% 50% 50% / 40% 40% 60% 60%', transform: 'rotate(-15deg)' }}>
-                %
+              <div className="absolute left-[38%] top-[32%] z-20 animate-pulse select-none" style={{ transform: 'rotate(-10deg)' }}>
+                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 15px 25px rgba(0, 210, 133, 0.4))' }}>
+                   <path d="M50 0L57.5 10H70L75 20L87.5 25L87.5 37.5L100 45L95 55L100 65L87.5 72.5L87.5 85L75 90L70 100H57.5L50 90L42.5 100H30L25 90L12.5 85L12.5 72.5L0 65L5 55L0 45L12.5 37.5L12.5 25L25 20L30 10H42.5L50 0Z" fill="#00d285" stroke="#121212" strokeWidth="3" strokeLinejoin="round"/>
+                   <text x="50" y="52" fill="#121212" fontSize="48" fontWeight="900" fontFamily="sans-serif" textAnchor="middle" dominantBaseline="middle">%</text>
+                 </svg>
               </div>
             </div>
 
