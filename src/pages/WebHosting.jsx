@@ -161,91 +161,189 @@ function WebHosting() {
       {/* 2. Pricing Plans Section */}
       <section id="pricing-plans" className="py-24 bg-[#f8f9fa] border-b border-black/5">
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[40px] text-[#121212] font-bold mb-4 font-sans tracking-tight">Choose Your Hosting Plan</h2>
-            <p className="text-[18px] text-[#121212]/70 max-w-[600px] mx-auto font-medium">Get the speed, security, and hosting resources you need for your website.</p>
+          <div className="text-center mb-12">
+            <h2 className="text-[32px] md:text-[40px] text-[#121212] font-bold mb-4 font-sans tracking-tight">Choose the right hosting plan</h2>
+            <div className="flex items-center justify-center gap-x-8 gap-y-3 text-[14px] font-medium text-[#121212]/80 mt-6 flex-wrap">
+              <span className="text-[#121212]">All Plans include:</span>
+              <span className="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Free domain name</span>
+              <span className="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 3h5v5"></path><path d="M4 20L21 3"></path><path d="M21 16v5h-5"></path><path d="M15 15l6 6"></path><path d="M4 4l5 5"></path></svg> Free website transfer</span>
+              <span className="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg> Free daily Backups</span>
+              <span className="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 24/7 Expert Support</span>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Plan 1: Starter */}
-            <div className="bg-white border border-black/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
-              <h3 className="text-[24px] font-bold text-[#121212] mb-2">Starter</h3>
-              <p className="text-[14px] text-[#121212]/70 mb-6">Perfect for small websites or blogs.</p>
-              <div className="mb-6 border-b border-black/10 pb-6">
-                <span className="text-[14px] text-[#121212]/50 line-through mr-2">$14.99/mo</span>
-                <div className="flex items-start">
-                  <span className="text-[24px] text-[#121212] font-bold mt-1">$</span>
-                  <span className="text-[56px] text-[#121212] font-black leading-none tracking-tight">2.99</span>
-                  <span className="text-[16px] text-[#121212]/70 font-medium self-end mb-2 ml-1">/mo</span>
-                </div>
-                <div className="mt-2 text-[13px] text-stinger-green font-bold bg-stinger-green/10 inline-block px-3 py-1 rounded-full">Save 80%</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1050px] mx-auto">
+            {/* Plan 1: StartUp */}
+            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-8 pt-10">
+              <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">StartUp</h3>
+              <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">For personal projects & small sites</p>
+              
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$17.99</span>
+                <div className="text-[11px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
               </div>
-              <ul className="flex flex-col gap-4 flex-1 mb-8">
-                {['1 Website', '10 GB Web Space', '~ 10,000 Visits Monthly', 'Unmetered Traffic', 'Free SSL', 'Daily Backup', 'Free CDN', 'Free Email', 'Managed WordPress'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[14px] text-[#121212]/80 font-medium">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div className="flex items-end mb-6">
+                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">2.99</span>
+                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+              </div>
+              
+              <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+                SELECT PLAN
+              </button>
+              
+              <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+                Renews at $17.99/mo. Prepaid for 12 months. Ex. VAT
+              </div>
+              
+              <div className="h-px w-full bg-black/5 mb-6"></div>
+              
+              <ul className="flex flex-col gap-3 mb-6">
+                {['Host 1 website with unlimited traffic', '10 GB Premium Google storage'].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#121212] text-[#121212] bg-transparent transition-all hover:bg-[#121212] hover:text-[#FFF9CA] cursor-pointer">
-                Get Plan
-              </button>
+              
+              <div className="text-[13px] font-bold text-[#121212] mb-4">Core Features</div>
+              
+              <ul className="flex flex-col gap-3 flex-1">
+                {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
+                  <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    {feature}
+                  </li>
+                ))}
+                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                  Free AI tokens <span className="text-[10px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                </li>
+                {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
+                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Plan 2: Pro (Highlighted) */}
-            <div className="bg-[#FFF9CA] border border-[#FFF9CA] rounded-2xl shadow-[0_20px_50px_rgba(255,249,202,0.15)] p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col relative scale-[1.03] z-10">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#121212] text-[#FFF9CA] text-[12px] font-black uppercase tracking-wider px-4 py-1.5 rounded-full border border-[#FFF9CA]/20">
-                Best Seller
+            {/* Plan 2: GrowBig (Highlighted) */}
+            <div className="bg-white border-2 border-[#00d285] rounded-2xl shadow-[0_8px_30px_rgba(0,210,133,0.15)] flex flex-col relative overflow-hidden transform md:-translate-y-4">
+              <div className="w-full bg-[#00d285] text-[#121212] text-center py-2 text-[12px] font-black uppercase tracking-widest">
+                Best Value
               </div>
-              <h3 className="text-[24px] font-bold text-[#121212] mb-2">Pro</h3>
-              <p className="text-[14px] text-[#121212]/70 mb-6">Great for growing sites and businesses.</p>
-              <div className="mb-6 border-b border-[#121212]/10 pb-6">
-                <span className="text-[14px] text-[#121212]/50 line-through mr-2">$24.99/mo</span>
-                <div className="flex items-start">
-                  <span className="text-[24px] text-[#121212] font-bold mt-1">$</span>
-                  <span className="text-[56px] text-[#121212] font-black leading-none tracking-tight">4.99</span>
-                  <span className="text-[16px] text-[#121212]/70 font-medium self-end mb-2 ml-1">/mo</span>
+              <div className="p-8 pt-8 flex flex-col flex-1">
+                <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GrowBig</h3>
+                <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">Perfect for your growing business</p>
+                
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$29.99</span>
+                  <div className="text-[11px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 83%</div>
                 </div>
-                <div className="mt-2 text-[13px] text-white font-bold bg-[#121212] inline-block px-3 py-1 rounded-full">Save 80%</div>
-              </div>
-              <ul className="flex flex-col gap-4 flex-1 mb-8">
-                {['Unlimited Websites', '20 GB Web Space', '~ 100,000 Visits Monthly', 'Unmetered Traffic', 'Free SSL', 'Daily Backup', 'Free CDN', 'Free Email', 'Managed WordPress', 'On-demand Backup Copies', '30% Faster PHP'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[14px] text-[#121212]/90 font-bold">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    {feature}
+                <div className="flex items-end mb-6">
+                  <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                  <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">4.99</span>
+                  <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+                </div>
+                
+                <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+                  SELECT PLAN
+                </button>
+                
+                <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+                  Renews at $29.99/mo. Prepaid for 12 months. Ex. VAT
+                </div>
+                
+                <div className="h-px w-full bg-black/5 mb-6"></div>
+                
+                <ul className="flex flex-col gap-3 mb-6">
+                  {['Unlimited websites, unlimited traffic', '50 GB Premium Google storage'].map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="text-[13px] font-bold text-[#121212] mb-4">Core Features</div>
+                
+                <ul className="flex flex-col gap-3 flex-1">
+                  {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
+                    <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      {feature}
+                    </li>
+                  ))}
+                  <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                    Free AI tokens <span className="text-[10px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
                   </li>
-                ))}
-              </ul>
-              <button className="w-full py-4 rounded-xl font-bold text-[16px] bg-[#121212] text-[#FFF9CA] transition-all hover:bg-black hover:scale-[1.02] cursor-pointer border-none shadow-lg">
-                Get Plan
-              </button>
+                  {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
+                    <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* Plan 3: Elite */}
-            <div className="bg-white border border-black/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
-              <h3 className="text-[24px] font-bold text-[#121212] mb-2">Elite</h3>
-              <p className="text-[14px] text-[#121212]/70 mb-6">Optimized for high-traffic sites.</p>
-              <div className="mb-6 border-b border-black/10 pb-6">
-                <span className="text-[14px] text-[#121212]/50 line-through mr-2">$39.99/mo</span>
-                <div className="flex items-start">
-                  <span className="text-[24px] text-[#121212] font-bold mt-1">$</span>
-                  <span className="text-[56px] text-[#121212] font-black leading-none tracking-tight">7.99</span>
-                  <span className="text-[16px] text-[#121212]/70 font-medium self-end mb-2 ml-1">/mo</span>
-                </div>
-                <div className="mt-2 text-[13px] text-stinger-green font-bold bg-stinger-green/10 inline-block px-3 py-1 rounded-full">Save 80%</div>
+            {/* Plan 3: GoGeek */}
+            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-8 pt-10">
+              <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GoGeek</h3>
+              <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">More power & features for big sites</p>
+              
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-[13px] text-[#121212]/60 line-through font-semibold">$44.99</span>
+                <div className="text-[11px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-2 py-0.5 rounded-[4px] tracking-wide">SAVE 82%</div>
               </div>
-              <ul className="flex flex-col gap-4 flex-1 mb-8">
-                {['Unlimited Websites', '40 GB Web Space', '~ 400,000 Visits Monthly', 'Unmetered Traffic', 'Free SSL', 'Daily Backup', 'Free CDN', 'Free Email', 'Managed WordPress', 'On-demand Backup Copies', '30% Faster PHP', 'Staging + Git', 'Highest Tier of Resources'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[14px] text-[#121212]/80 font-medium">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <div className="flex items-end mb-6">
+                <span className="text-[24px] text-[#121212] font-bold mb-1 mr-0.5">$</span>
+                <span className="text-[52px] text-[#121212] font-bold leading-none tracking-tight">7.99</span>
+                <span className="text-[14px] text-[#121212]/60 font-semibold mb-2 ml-1">/mo.</span>
+              </div>
+              
+              <button className="w-full py-3.5 rounded-full font-bold text-[14px] bg-[#222] text-white hover:bg-black transition-colors cursor-pointer mb-4">
+                SELECT PLAN
+              </button>
+              
+              <div className="text-[11px] text-[#121212]/50 font-medium text-center mb-8">
+                Renews at $44.99/mo. Prepaid for 12 months. Ex. VAT
+              </div>
+              
+              <div className="h-px w-full bg-black/5 mb-6"></div>
+              
+              <ul className="flex flex-col gap-3 mb-6">
+                {['Unlimited websites, unlimited traffic', '100 GB Premium Google storage'].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#121212] text-[#121212] bg-transparent transition-all hover:bg-[#121212] hover:text-[#FFF9CA] cursor-pointer">
-                Get Plan
-              </button>
+              
+              <div className="text-[13px] font-bold text-[#121212] mb-4">Core Features</div>
+              
+              <ul className="flex flex-col gap-3 flex-1">
+                {['Free domain', 'Free SSL, CDN, Backups', 'Free email'].map((feature, i) => (
+                  <li key={`core-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    {feature}
+                  </li>
+                ))}
+                <li className="flex items-center gap-3 text-[13px] text-[#121212]/80 font-medium">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                  Free AI tokens <span className="text-[10px] text-[#00d285] font-extrabold bg-[#00d285]/10 px-1.5 py-0.5 rounded-[3px] ml-1">NEW</span>
+                </li>
+                {['Multilevel caching', 'Enhanced security', 'Collaborators'].map((feature, i) => (
+                  <li key={`core2-${i}`} className="flex items-start gap-3 text-[13px] text-[#121212]/80 font-medium">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00d285" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
             
           </div>
