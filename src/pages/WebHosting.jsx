@@ -160,7 +160,7 @@ function WebHosting() {
 
       {/* 2. Pricing Plans Section */}
       <section id="pricing-plans" className="py-24 bg-[#f8f9fa] border-b border-black/5">
-        <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
+        <div className="w-full max-w-[1350px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-[32px] md:text-[40px] text-[#121212] font-bold mb-4 font-sans tracking-tight">Choose the right hosting plan</h2>
             <div className="flex items-center justify-center gap-x-8 gap-y-3 text-[14px] font-medium text-[#121212]/80 mt-6 flex-wrap">
@@ -172,9 +172,9 @@ function WebHosting() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1050px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {/* Plan 1: StartUp */}
-            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-8 pt-10">
+            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-10 pt-12">
               <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">StartUp</h3>
               <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">For personal projects & small sites</p>
               
@@ -231,10 +231,10 @@ function WebHosting() {
 
             {/* Plan 2: GrowBig (Highlighted) */}
             <div className="bg-white border-2 border-[#00d285] rounded-2xl shadow-[0_8px_30px_rgba(0,210,133,0.15)] flex flex-col relative overflow-hidden transform md:-translate-y-4">
-              <div className="w-full bg-[#00d285] text-[#121212] text-center py-2 text-[12px] font-black uppercase tracking-widest">
+              <div className="w-full bg-[#00d285] text-[#121212] text-center py-2.5 text-[12px] font-black uppercase tracking-widest">
                 Best Value
               </div>
-              <div className="p-8 pt-8 flex flex-col flex-1">
+              <div className="p-10 pt-10 flex flex-col flex-1">
                 <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GrowBig</h3>
                 <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">Perfect for your growing business</p>
                 
@@ -291,7 +291,7 @@ function WebHosting() {
             </div>
 
             {/* Plan 3: GoGeek */}
-            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-8 pt-10">
+            <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-10 pt-12">
               <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">GoGeek</h3>
               <p className="text-[14px] text-[#121212]/70 mb-8 font-medium">More power & features for big sites</p>
               
