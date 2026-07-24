@@ -332,7 +332,7 @@ function WebHosting() {
 
           {/* Overlapping Mockup Cards Grid */}
           <div className="relative w-full h-[400px] md:h-[520px] flex items-center justify-center overflow-hidden pt-8">
-            <div className="absolute flex items-end justify-center w-full max-w-[950px] h-full bottom-[-30px]">
+            <div className="absolute flex items-end justify-center w-full max-w-[950px] h-full bottom-[40px]">
               
               {/* Backmost Left Card */}
               <div className="w-[18%] aspect-[4/3] bg-white rounded-t-2xl shadow-lg border border-black/5 opacity-40 transform -rotate-12 translate-x-[40px] translate-y-[30px] z-0 overflow-hidden hidden sm:block">
