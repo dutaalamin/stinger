@@ -787,9 +787,9 @@ function App() {
             {/* Header */}
             <div className="bg-[#FFF9CA] text-black px-5 py-4 flex items-center justify-between shadow-sm">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center text-[20px] shadow-sm">✨</div>
+                <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center text-[20px] shadow-sm pb-1">🍋</div>
                 <div>
-                  <h4 style={{ fontSize: '15px', fontWeight: '800' }}>Stinger AI Chat</h4>
+                  <h4 style={{ fontSize: '15px', fontWeight: '800' }}>Lemon AI</h4>
                   <div className="text-[12px] text-black/70 flex items-center gap-1.5 font-medium mt-0.5">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                     <span>Online & Ready</span>
@@ -822,7 +822,7 @@ function App() {
             <form className="px-4 py-3.5 border-t border-slate-200 flex gap-2.5 bg-white items-center" onSubmit={handleSendMessage}>
               <input
                 type="text"
-                placeholder="Ask Stinger AI..."
+                placeholder="Ask Lemon AI..."
                 className="flex-1 border border-slate-200 bg-slate-50 rounded-full px-5 py-2.5 text-[14px] outline-none font-sans transition-all focus:border-[#FFF9CA] focus:bg-white focus:shadow-[0_0_0_3px_rgba(255,249,202,0.8)]"
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
@@ -834,11 +834,8 @@ function App() {
           </div>
         ) : (
           <div className="w-[64px] h-[64px] rounded-full bg-[#FFF9CA] text-[#121212] shadow-[0_8px_30px_rgba(255,249,202,0.6)] flex items-center justify-center cursor-pointer transition-all duration-300 relative hover:scale-110 hover:shadow-[0_12px_40px_rgba(255,249,202,0.9)] hover:bg-[#FFFBEB] after:content-[''] after:absolute after:inset-[-4px] after:rounded-full after:border-2 after:border-[#FFF9CA]/80 after:animate-[ripple_2s_infinite_ease-out]" onClick={() => setChatOpen(true)}>
-            {/* AI Sparkle Icon */}
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11.5 2L13.2 8.3L19.5 10L13.2 11.7L11.5 18L9.8 11.7L3.5 10L9.8 8.3L11.5 2Z" />
-              <path d="M19 16L19.5 18.5L22 19L19.5 19.5L19 22L18.5 19.5L16 19L18.5 18.5L19 16Z" />
-            </svg>
+            {/* AI Lemon Icon */}
+            <span className="text-[32px] pb-1">🍋</span>
             <span className="absolute -top-1 -right-1 w-[22px] h-[22px] bg-[#121212] text-[#FFF9CA] rounded-full text-[11px] font-black flex items-center justify-center border-2 border-white shadow-sm">1</span>
           </div>
         )}
