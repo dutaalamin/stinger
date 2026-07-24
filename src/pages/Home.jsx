@@ -613,7 +613,7 @@ function Home() {
       {/* Services Grid Section */}
       <section className="services-section" style={{ padding: '120px 0', backgroundColor: '#FFFFFF' }}>
         <div className="w-full max-w-[1440px] mx-auto px-[5%] lg:px-12">
-          <h2 className="text-center" style={{ fontSize: '48px', color: 'var(--text-dark)', marginBottom: '16px' }}>
+          <h2 className="text-center" style={{ fontSize: '48px', color: 'var(--color-text-dark)', marginBottom: '16px' }}>
             Fast, secure, smarter AI-powered website services
           </h2>
           <p className="text-center text-muted" style={{ maxWidth: '700px', margin: '0 auto 64px auto', fontSize: '18px' }}>
