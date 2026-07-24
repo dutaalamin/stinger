@@ -433,7 +433,6 @@ function WebHosting() {
                 ))}
               </ul>
             </div>
-          </div>    
           </div>
           
           <div className="mt-8 text-center text-[#121212]/60 text-[14px] font-medium">
