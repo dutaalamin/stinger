@@ -311,7 +311,78 @@ function WebHosting() {
         </div>
       </section>
 
-      {/* 4. WordPress Focus Section */}
+      {/* 4. Website Builder Section (SiteGround Style: Light Sage Background) */}
+      <section className="py-24 bg-[#dcf5e1] text-[#121212] relative overflow-hidden">
+        <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
+          
+          {/* Header Row */}
+          <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-16 items-start mb-20">
+            <div>
+              <h2 className="text-[36px] md:text-[46px] lg:text-[50px] font-extrabold leading-[1.15] tracking-tight font-sans text-black">
+                Build your perfect site with <br />
+                Stinger Website Builder
+              </h2>
+            </div>
+            <div>
+              <p className="text-[16px] md:text-[18px] text-black/80 leading-relaxed font-medium mt-2">
+                Enjoy the easiest way to create and manage a website. Packed with AI assistant, built-in marketing, ecommerce features and more, our Website Builder gives you all the essentials to build a successful online presence.
+              </p>
+            </div>
+          </div>
+
+          {/* Overlapping Mockup Cards Grid */}
+          <div className="relative w-full h-[400px] md:h-[520px] flex items-center justify-center overflow-hidden pt-8">
+            <div className="absolute flex items-end justify-center w-full max-w-[950px] h-full bottom-[-30px]">
+              
+              {/* Backmost Left Card */}
+              <div className="w-[18%] aspect-[4/3] bg-white rounded-t-2xl shadow-lg border border-black/5 opacity-40 transform -rotate-12 translate-x-[40px] translate-y-[30px] z-0 overflow-hidden hidden sm:block">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=300&q=80" alt="Template" className="w-full h-full object-cover" />
+              </div>
+
+              {/* Back Left Card */}
+              <div className="w-[22%] aspect-[4/3] bg-white rounded-t-2xl shadow-xl border border-black/5 opacity-60 transform -rotate-6 translate-x-[20px] translate-y-[15px] z-10 overflow-hidden hidden sm:block">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=300&q=80" alt="Template" className="w-full h-full object-cover" />
+              </div>
+
+              {/* Main Center Card (FocusPoint) */}
+              <div className="w-[85%] sm:w-[50%] aspect-[4/3] bg-white rounded-t-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-black/10 z-30 p-4 md:p-6 flex flex-col transform translate-y-0 transition-transform duration-300 hover:-translate-y-2">
+                <div className="flex justify-between items-center border-b border-black/5 pb-3 mb-4">
+                  <span className="font-extrabold text-[15px] md:text-[17px] text-black">FocusPoint</span>
+                  <span className="text-[11px] md:text-[12px] font-bold text-black/60 uppercase tracking-wider">GET IN TOUCH</span>
+                </div>
+                {/* Mockup grids */}
+                <div className="grid grid-cols-[1fr_1.2fr] gap-3 md:gap-4 flex-1 overflow-hidden">
+                  <div className="bg-slate-100 rounded-xl overflow-hidden border border-black/5">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=300&q=80" alt="Mountain Road" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="grid grid-rows-[1.2fr_1fr] gap-3 md:gap-4">
+                    <div className="bg-slate-100 rounded-xl overflow-hidden border border-black/5">
+                      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80" alt="Yosemite" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="bg-slate-100 rounded-xl overflow-hidden border border-black/5">
+                      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=300&q=80" alt="Forest" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Back Right Card */}
+              <div className="w-[22%] aspect-[4/3] bg-white rounded-t-2xl shadow-xl border border-black/5 opacity-60 transform rotate-6 -translate-x-[20px] translate-y-[15px] z-10 overflow-hidden hidden sm:block">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=300&q=80" alt="Template" className="w-full h-full object-cover" />
+              </div>
+
+              {/* Backmost Right Card */}
+              <div className="w-[18%] aspect-[4/3] bg-white rounded-t-2xl shadow-lg border border-black/5 opacity-40 transform rotate-12 -translate-x-[40px] translate-y-[30px] z-0 overflow-hidden hidden sm:block">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=300&q=80" alt="Template" className="w-full h-full object-cover" />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. WordPress Focus Section */}
       <section className="py-24 bg-[#1a1a1a] relative overflow-hidden">
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 w-full order-2 lg:order-1 relative">
