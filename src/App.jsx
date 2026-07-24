@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import WebHosting from './pages/WebHosting';
 
 // Custom SVG Icons
 const LogoSIcon = ({ className, strokeColor = "#FFF9CA" }) => (
@@ -510,7 +513,8 @@ function App() {
   };
 
   return (
-    <div>
+    <Router>
+      <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
       {/* Navbar / Header */}
       <header 
         className={`absolute top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out ${scrolled ? 'fixed bg-[#121212]/95 backdrop-blur-md shadow-md' : 'bg-transparent'} ${hideNavbar ? '-translate-y-full' : 'translate-y-0'} ${hoveredMenu ? '!bg-white shadow-md' : ''}`}
@@ -518,10 +522,10 @@ function App() {
       >
         <div className="w-full px-6 lg:px-12 flex justify-between items-center h-[90px]">
           {/* Left: Logo */}
-          <a href="#" className={`flex items-center gap-1.5 no-underline font-sans font-extrabold text-[28px] transition-all duration-300 hover:-translate-y-[1px] group shrink-0 ${hoveredMenu ? 'text-[#1a1a1a]' : 'text-[#FFF9CA]'}`}>
+          <Link to="/" className={`flex items-center gap-1.5 no-underline font-sans font-extrabold text-[28px] transition-all duration-300 hover:-translate-y-[1px] group shrink-0 ${hoveredMenu ? 'text-[#1a1a1a]' : 'text-[#FFF9CA]'}`}>
             <LogoSIcon className="w-9 h-9" strokeColor={hoveredMenu ? '#1a1a1a' : '#FFF9CA'} />
             <span>Stinger</span>
-          </a>
+          </Link>
           
           {/* Center: Main Navigation Menu */}
           <ul ref={navRef} className="hidden lg:flex list-none items-center h-full gap-2 xl:gap-4 m-0 p-0">
@@ -534,14 +538,15 @@ function App() {
                 textColorClass = isHovered ? "text-[#e6c800]" : "text-[#4a4a4a]";
               }
               
+              const toPath = item === 'Web Hosting' ? '/web-hosting' : '/';
               return (
                 <li key={item} className="h-full flex items-center" onMouseEnter={() => setHoveredMenu(item)}>
-                  <a href="#" className={`no-underline font-bold text-[14px] xl:text-[15px] transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap h-full px-3 relative ${textColorClass} hover:text-[#e6c800]`}>
+                  <Link to={toPath} className={`no-underline font-bold text-[14px] xl:text-[15px] transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap h-full px-3 relative ${textColorClass} hover:text-[#e6c800]`}>
                     <span>{item}</span>
                     {showChevron && (
                       <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isHovered ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
                     )}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -565,469 +570,12 @@ function App() {
         {hoveredMenu && <MegamenuContent activeMenu={hoveredMenu} navOffset={navOffset} />}
       </header>
 
-      {/* Redesigned Dark Hero Section */}
-      <section className="relative lg:h-screen lg:min-h-[850px] flex items-center text-white overflow-hidden py-[80px] lg:py-0 text-center lg:text-left bg-[linear-gradient(to_bottom,rgba(18,18,18,0.95)_60%,rgba(28,28,28,0.85)_100%),url('/stinger_hero_bg.png')] lg:bg-[linear-gradient(to_right,rgba(18,18,18,0.95)_45%,rgba(28,28,28,0.85)_65%,rgba(40,40,40,0.3)_100%),url('/stinger_hero_bg.png')] bg-no-repeat bg-[position:center_right] bg-cover">
-        <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col justify-between h-full pt-[140px] pb-10 lg:pt-[160px] lg:pb-12">
-          
-          {/* Main Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center flex-1">
-            
-            {/* Left Content */}
-            <div className="mt-4 lg:mt-8">
-              <h1 className="text-[44px] md:text-[68px] text-white mb-[24px] leading-[1.25] tracking-[-0.03em] font-bold font-sans">
-                Build, host, grow<br />
-                your online presence
-              </h1>
-              <p className="text-[20px] md:text-[22px] text-white/85 mb-10 leading-relaxed font-medium font-sans">
-                Your all-in-one platform for online success.
-              </p>
-              <button className="inline-flex bg-[#FFF9CA] text-bg-dark rounded-full font-bold text-[17px] px-10 py-4 uppercase tracking-[0.03em] transition-all duration-300 shadow-[0_4px_15px_rgba(255,249,202,0.15)] hover:bg-[#FFFBEB] hover:-translate-y-[2px] hover:shadow-[0_6px_20px_rgba(255,249,202,0.35)] cursor-pointer border-none font-sans">EXPLORE SERVICES</button>
-            </div>
-
-            {/* Right Visual Floating Options */}
-            <div className="relative h-[460px] items-center justify-end hidden lg:flex">
-              <div className="flex flex-col gap-[16px] w-[360px] z-10 relative h-[380px]">
-                {[
-                  { id: 'email', label: 'Send email campaigns', icon: '✉' },
-                  { id: 'code', label: 'Code with AI', icon: '✦' },
-                  { id: 'launch', label: 'Launch a website', icon: '💻' },
-                  { id: 'wordpress', label: 'Transfer WordPress sites', icon: 'Ⓦ' },
-                  { id: 'sell', label: 'Sell online', icon: '🛒' }
-                ].map((opt, i, arr) => {
-                  const activeIdx = arr.findIndex(o => o.id === activeHeroOption);
-                  let diff = i - activeIdx;
-                  if (diff < -2) diff += 5;
-                  if (diff > 2) diff -= 5;
-                  
-                  const translateY = (diff + 2) * 76; 
-                  const isAct = diff === 0;
-                  
-                  let scale = 1;
-                  let opacity = 1;
-                  let zIndex = 5;
-                  
-                  if (Math.abs(diff) === 2) { scale = 0.85; opacity = 0.3; zIndex = 1; }
-                  else if (Math.abs(diff) === 1) { scale = 0.95; opacity = 0.7; zIndex = 2; }
-                  else { scale = 1.15; opacity = 1; zIndex = 10; }
-                  
-                  return (
-                    <div
-                      key={opt.id}
-                      className={`bg-black/60 backdrop-blur-md border border-white/10 text-white/65 px-6 py-4 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] font-medium text-[15px] hover:border-white/20 hover:text-white hover:opacity-85 ${isAct ? '!bg-black !border-white !text-white !opacity-100 !shadow-[0_20px_40px_rgba(0,0,0,0.6),0_0_25px_rgba(255,255,255,0.15)]' : 'shadow-[0_10px_25px_-5px_rgba(0,0,0,0.3)]'}`}
-                      onClick={() => setActiveHeroOption(opt.id)}
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        transform: `translateY(${translateY}px) scale(${scale}) ${isAct ? 'translateX(-8px)' : ''}`,
-                        opacity: opacity,
-                        zIndex: zIndex,
-                        transition: 'all 1.8s cubic-bezier(0.22, 1, 0.36, 1)'
-                      }}
-                    >
-                      <div className="flex items-center gap-3 justify-center w-full">
-                        <span className="text-[17px]">{opt.icon}</span>
-                        <span>{opt.label}</span>
-                      </div>
-                      {isAct && (
-                        <div className="absolute -top-2 -right-2 w-[22px] h-[22px] bg-[#FFF9CA] text-bg-dark rounded-full flex items-center justify-center text-[11px] font-extrabold shadow-[0_2px_8px_rgba(255,249,202,0.4)] z-20">✓</div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-          </div>
-
-          {/* Bottom Centered Trustpilot Rating */}
-          <div className="flex flex-col gap-2 items-center text-center mt-12 w-full">
-            <div className="flex items-center justify-center gap-2 text-[14px] text-white/90">
-              <span>Excellent</span>
-              <div className="flex items-center gap-1 font-bold">
-                <div className="flex gap-[3px]">
-                  <span className="w-[18px] h-[18px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#1a1a1a] text-[11px] rounded-[2px]">★</span>
-                  <span className="w-[18px] h-[18px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#1a1a1a] text-[11px] rounded-[2px]">★</span>
-                  <span className="w-[18px] h-[18px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#1a1a1a] text-[11px] rounded-[2px]">★</span>
-                  <span className="w-[18px] h-[18px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#1a1a1a] text-[11px] rounded-[2px]">★</span>
-                  <span className="w-[18px] h-[18px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#1a1a1a] text-[11px] rounded-[2px]">★</span>
-                </div>
-                <span>Trustpilot</span>
-              </div>
-            </div>
-            <p className="text-[13px] text-white/60">
-              Top industry rating - <strong>4.9 out of 5 stars</strong>. Trusted by the owners of 3 Million domains.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Services Grid Section */}
-      <section className="services-section" style={{ padding: '120px 0', backgroundColor: '#FFFFFF' }}>
-        <div className="w-full max-w-[1440px] mx-auto px-[5%] lg:px-12">
-          <h2 className="text-center" style={{ fontSize: '48px', color: 'var(--text-dark)', marginBottom: '16px' }}>
-            Fast, secure, smarter AI-powered website services
-          </h2>
-          <p className="text-center text-muted" style={{ maxWidth: '700px', margin: '0 auto 64px auto', fontSize: '18px' }}>
-            Choose the perfect hosting and AI tools to build, launch, and grow your online presence.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[328px_396px_344px] gap-6" style={{ gridAutoRows: 'minmax(320px, auto)' }}>
-            
-            {/* 1. Hosting for WordPress */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-2 lg:col-span-2 lg:row-start-1 lg:row-end-2 bg-[#F1F6FB]">
-              <h3 className="text-[32px] md:text-[36px] font-bold text-[#1a1a1a] mb-4 font-display">Hosting for WordPress</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-[60%]">Start or migrate WordPress on our ultrafast hosting.</p>
-              <button className="self-start px-8 py-3.5 rounded-[30px] font-bold text-[14px] uppercase bg-[#1f1f1f] text-white border-none cursor-pointer transition-colors hover:bg-black z-10 relative tracking-[0.5px]">GET STARTED</button>
-              <div className="absolute z-[1] pointer-events-none right-0 bottom-0 w-[45%] flex items-end">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/wordpress_hosting_en.webp" alt="Hosting for WordPress" className="w-full h-auto block translate-y-[5px]" />
-              </div>
-            </div>
-
-            {/* 2. Website Builder */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-2 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-2 bg-[#F8F9FA]">
-              <h3 className="text-[32px] md:text-[36px] font-bold text-[#1a1a1a] mb-4 font-display">Website Builder</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-[60%]">Create a website and get online easily and quickly.</p>
-              <button className="self-start px-8 py-3.5 rounded-[30px] font-bold text-[14px] uppercase bg-[#1f1f1f] text-white border-none cursor-pointer transition-colors hover:bg-black z-10 relative tracking-[0.5px]">START FREE</button>
-              <div className="absolute z-[1] pointer-events-none right-0 bottom-0 w-[45%]">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/website_builder.webp" alt="Website Builder" className="w-full h-auto block" />
-              </div>
-            </div>
-
-            {/* 3. Stinger AI Coder */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-2 lg:col-span-2 lg:row-start-2 lg:row-end-4 bg-[#F1EDFA]">
-              <h3 className="text-[32px] md:text-[36px] font-bold text-[#1a1a1a] mb-4 font-display">Coderick AI</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-[90%]">Build apps and websites by chatting with AI. Launch faster and host them on our all-inclusive hosting platform.</p>
-              <button className="self-start px-8 py-3.5 rounded-[30px] font-bold text-[14px] uppercase bg-[#1f1f1f] text-white border-none cursor-pointer transition-colors hover:bg-black z-10 relative tracking-[0.5px]">START BUILDING</button>
-              <div className="relative z-[1] pointer-events-none mt-10 w-full flex-1 flex flex-col justify-end">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/coderick_ai_en.webp" alt="Coderick AI" className="w-full h-auto block rounded-t-[12px]" />
-              </div>
-            </div>
-
-            {/* 4. Web Hosting */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-1 lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3 bg-[#E2F2E7]">
-              <h3 className="text-[28px] md:text-[32px] font-bold text-[#1a1a1a] mb-4 font-display">Web Hosting</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-full">Build and grow your site with our fast & reliable hosting.</p>
-              <a href="#" className="text-[14px] font-bold text-[#1a1a1a] uppercase no-underline inline-flex items-center gap-1 z-10 relative hover:text-black">
-                VIEW PLANS ↗
-              </a>
-              <div className="relative z-[1] pointer-events-none mt-8 w-[calc(100%+20px)] -ml-[10px] flex-1 flex flex-col justify-end">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/web_hosting.webp" alt="Web Hosting" className="w-full h-auto block" />
-              </div>
-            </div>
-
-            {/* 5. Online Store */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-1 lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-3 bg-[#FDF9E2]">
-              <h3 className="text-[28px] md:text-[32px] font-bold text-[#1a1a1a] mb-4 font-display">Online store</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-full">Build your online store easily and start selling within hours.</p>
-              <a href="#" className="text-[14px] font-bold text-[#1a1a1a] uppercase no-underline inline-flex items-center gap-1 z-10 relative hover:text-black">
-                TRY FREE ↗
-              </a>
-              <div className="relative z-[1] pointer-events-none mt-8 w-full flex-1 flex flex-col justify-end">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/online_store.webp" alt="Online store" className="w-full h-auto block" />
-              </div>
-            </div>
-
-            {/* 6. Email Marketing */}
-            <div className="rounded-[32px] p-10 relative overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] col-span-1 md:col-span-2 lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-4 bg-[#F8F9FA]">
-              <h3 className="text-[32px] md:text-[36px] font-bold text-[#1a1a1a] mb-4 font-display">Email Marketing</h3>
-              <p className="text-[17px] text-[#4a4a4a] mb-8 leading-relaxed z-10 relative max-w-[50%]">Grow your business with easy and effective email marketing.</p>
-              <button className="self-start px-8 py-3.5 rounded-[30px] font-bold text-[14px] uppercase bg-[#1f1f1f] text-white border-none cursor-pointer transition-colors hover:bg-black z-10 relative tracking-[0.5px]">LEARN MORE</button>
-              <div className="absolute z-[1] pointer-events-none right-0 bottom-0 w-[45%]">
-                <img src="https://static-cdn.siteground.com/img/home/hover-videos/covers/email_marketing.webp" alt="Email Marketing" className="w-full h-auto block" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Domain Search Section */}
-      <section className="bg-[#0c0d0e] bg-[linear-gradient(rgba(12,13,14,0.4),rgba(12,13,14,0.4)),url('https://static-cdn.siteground.com/img/home/domain_bg.jpg')] bg-cover bg-center bg-no-repeat text-white py-[160px] relative overflow-hidden">
-        <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12">
-          <h2 className="text-[38px] md:text-[52px] text-center mb-6 font-bold font-display">Secure your domain from just $17.99/yr</h2>
-          <div className="flex justify-center items-center flex-wrap gap-6 mb-8 text-white text-[13.5px] font-sans font-medium">
-            <div className="flex items-center gap-[6px]">
-              <ShieldCheckIcon className="w-4 h-4 text-white shrink-0 block" />
-              <span>1-year Free Domain Privacy</span>
-            </div>
-            <div className="flex items-center gap-[6px]">
-              <LockIcon className="w-4 h-4 text-white shrink-0 block" />
-              <span>2-factor Authentication</span>
-            </div>
-            <div className="flex items-center gap-[6px]">
-              <DomainSupportIcon className="w-4 h-4 text-white shrink-0 block" />
-              <span>24/7 Expert Support</span>
-            </div>
-          </div>
-
-          <div className="max-w-[860px] mx-auto mb-9 relative z-10 bg-white/5 border border-white/15 rounded-[20px] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-            <form className="flex bg-white rounded-[14px] p-2 relative items-center w-full" onSubmit={handleDomainSearch}>
-              <div className="flex flex-1 items-center px-4">
-                <input
-                  type="text"
-                  placeholder="Start with your idea or business name"
-                  className="w-full border-none outline-none text-[16px] font-sans text-bg-dark bg-transparent h-[52px] placeholder:text-slate-400 placeholder:italic"
-                  value={domainInput}
-                  onChange={(e) => setDomainInput(e.target.value)}
-                />
-              </div>
-              <button type="submit" className="bg-[#1a1b1c] text-white border-none rounded-xl px-9 h-[48px] font-display font-bold text-[13px] cursor-pointer transition-all hover:bg-black tracking-[0.5px]">
-                {searching ? 'SEARCHING...' : 'SEARCH'}
-              </button>
-            </form>
-
-            {/* Simulated Domain Result */}
-            {searchResult && (
-              <div className="max-w-full mt-5 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl py-5 px-6 flex items-center justify-between">
-                <div>
-                  <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', marginBottom: '4px' }}>
-                    {searchResult.name}
-                  </h4>
-                  <p style={{ fontSize: '14px', color: searchResult.available ? '#FFF9CA' : '#EF4444' }}>
-                    {searchResult.available 
-                      ? `Available! Register now for just ${searchResult.price}/yr.` 
-                      : 'Taken. Search for another name or extension.'
-                    }
-                  </p>
-                </div>
-                {searchResult.available && (
-                  <button className="inline-flex bg-[#FFF9CA] text-bg-dark rounded-full font-bold text-[14px] px-4 py-2 transition-all duration-300 shadow-[0_6px_20px_rgba(255,249,202,0.25)] hover:bg-[#FFFBEB] hover:-translate-y-[2px] cursor-pointer border-none">
-                    Add to Cart
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* Quick filter pills */}
-          <div className="flex justify-center items-center flex-wrap gap-3 max-w-[800px] mx-auto">
-            {['.com', '.org', '.net', '.biz', '.info', '.shop'].map((tld) => (
-              <button
-                key={tld}
-                className={`bg-white/5 border border-white/15 text-white rounded-full px-5 py-2 cursor-pointer transition-all duration-300 text-[13px] font-display font-bold tracking-[0.5px] hover:bg-white/10 hover:border-white/30 ${selectedTld === tld ? 'bg-white/10 border-white/30' : ''}`}
-                onClick={() => handleQuickFilter(tld)}
-              >
-                {tld.toUpperCase()}
-              </button>
-            ))}
-            <a href="#" className="text-white no-underline font-display font-bold text-[12px] tracking-[0.5px] inline-flex items-center px-3 py-2 transition-opacity duration-200 hover:opacity-80">
-              VIEW ALL ↗
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Studio Section */}
-      <section className="py-[120px] bg-white">
-        <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-5">
-              <h2 className="text-[44px] md:text-[52px] text-bg-dark mb-6 tracking-[-0.01em] font-bold font-display leading-[1.15]">
-                Powerful AI Studio to optimize and scale work
-              </h2>
-              <p className="text-[18px] md:text-[20px] text-slate-500 mb-10 leading-relaxed font-medium">
-                Manage tasks seamlessly and work smarter with Stinger AI Studio - your one place to chat with multiple AI models and access smart AI agents.
-              </p>
-              <button className="inline-flex bg-[#1a1a1a] text-white rounded-full font-bold text-[16px] px-8 py-4 uppercase tracking-[0.03em] transition-all duration-300 hover:bg-black hover:-translate-y-[2px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] cursor-pointer border-none">START FREE</button>
-            </div>
-            <div className="lg:col-span-7">
-              <div className="bg-[linear-gradient(135deg,#1E1B4B_0%,#311042_100%)] rounded-[24px] p-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.15)] overflow-hidden relative aspect-[16/10]">
-                {/* AI Models selector sidebar */}
-                <div className="flex flex-col gap-3 absolute right-6 top-1/2 -translate-y-1/2 z-10">
-                  {['Imogen', 'ChatGPT', 'Nano Banana', 'Claude', 'Gemini'].map((model) => (
-                    <button
-                      key={model}
-                      className={`bg-white rounded-full px-4 py-2 flex items-center gap-2 shadow-md text-[12px] font-semibold transition-all duration-300 cursor-pointer border-2 hover:-translate-x-1 ${activeModel === model ? 'border-[#FFF9CA] -translate-x-1' : 'border-transparent'}`}
-                      onClick={() => setActiveModel(model)}
-                    >
-                      <span style={{
-                        width: '8px',
-                        height: '8px',
-                        borderRadius: '50%',
-                        background: model === 'Gemini' ? '#3B82F6' : model === 'ChatGPT' ? '#10B981' : '#F59E0B'
-                      }}></span>
-                      {model}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Main AI window mock */}
-                <div className="bg-white/5 backdrop-blur-[16px] border border-white/10 rounded-2xl w-[78%] h-[90%] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col">
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderBottom: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.2)' }}>
-                    <span style={{ color: 'white', fontSize: '11px', fontWeight: 'bold' }}>✦ Stinger AI Studio</span>
-                    <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '10px' }}>Model: {activeModel}</span>
-                  </div>
-                  <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.1)', padding: '10px 14px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)', maxWidth: '85%' }}>
-                        <p style={{ color: 'white', fontSize: '12px', lineHeight: '1.5' }}>
-                          Create a new blog post and generate a header image for my hosting company.
-                        </p>
-                      </div>
-                      <div style={{ background: 'rgba(255, 249, 202, 0.08)', padding: '10px 14px', borderRadius: '8px', border: '1px solid rgba(255, 249, 202, 0.15)', maxWidth: '85%', alignSelf: 'flex-end' }}>
-                        <p style={{ color: '#FFF9CA', fontSize: '12px', lineHeight: '1.5' }}>
-                          Generating blog layout and rendering image mock with {activeModel}...
-                        </p>
-                      </div>
-                    </div>
-                    <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '999px', padding: '6px 12px', display: 'flex', gap: '8px', alignItems: 'center', border: '1px solid rgba(255,255,255,0.1)' }}>
-                      <div style={{ flex: 1, height: '14px', background: 'transparent' }}></div>
-                      <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: '#FFF9CA', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a1a1a', fontSize: '10px', fontWeight: 'bold' }}>➔</div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Support Section */}
-      <section className="bg-[#111111] text-white py-[120px] lg:py-[160px]">
-        <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            
-            {/* Left Column: Title and Images */}
-            <div className="flex flex-col">
-              <h2 className="text-[44px] md:text-[56px] font-bold font-display mb-16 leading-[1.15]">
-                Real support, real<br />humans 24/7
-              </h2>
-              
-              <div className="relative w-full max-w-[620px] h-[520px] mx-auto lg:mx-0">
-                {/* Yellow Image (Guy) */}
-                <div className="absolute top-0 left-0 w-[420px] h-[420px] rounded-[24px] overflow-hidden shadow-lg bg-[#EED66B]">
-                  <img src="/support_guy.png" alt="Support Agent" className="w-full h-full object-cover" />
-                </div>
-                
-                {/* Green Image (Girl) */}
-                <div className="absolute top-[160px] left-[260px] w-[360px] h-[360px] rounded-[24px] overflow-hidden shadow-2xl bg-[#52B788] z-10">
-                  <img src="/support_girl.png" alt="Support Agent" className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Features List */}
-            <div className="flex flex-col max-w-[600px] mx-auto lg:mx-0 w-full">
-              {/* Feature 1 */}
-              <div className="flex gap-6 items-start border-b border-white/10 pb-8 mb-8">
-                <div className="mt-1 text-white">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg>
-                </div>
-                <div>
-                  <h3 className="text-[22px] md:text-[26px] font-bold font-display mb-2 text-white">20+ years experience</h3>
-                  <p className="text-[16px] text-gray-400 font-medium">Helping businesses succeed online</p>
-                </div>
-              </div>
-              
-              {/* Feature 2 */}
-              <div className="flex gap-6 items-start border-b border-white/10 pb-8 mb-8">
-                <div className="mt-1 text-white">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3-6 6"></path><path d="m8.38 21.08-3.89-3.89a1.5 1.5 0 0 1 0-2.12l1.88-1.88a1.5 1.5 0 0 1 2.12 0l3.88 3.88a2.1 2.1 0 0 1 0 3l-1.01 1.01a2.1 2.1 0 0 1-2.98 0z"></path></svg>
-                </div>
-                <div>
-                  <h3 className="text-[22px] md:text-[26px] font-bold font-display mb-2 text-white">98% customer satisfaction</h3>
-                  <p className="text-[16px] text-gray-400 font-medium">Steady for over 10 years</p>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="flex gap-6 items-start border-b border-white/10 pb-8 mb-8">
-                <div className="mt-1 text-white">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>
-                </div>
-                <div>
-                  <h3 className="text-[22px] md:text-[26px] font-bold font-display mb-2 text-white">24/7 live support</h3>
-                  <p className="text-[16px] text-gray-400 font-medium">Always available, always helpful</p>
-                </div>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="flex gap-6 items-start pb-8 mb-4">
-                <div className="mt-1 text-white">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
-                </div>
-                <div>
-                  <h3 className="text-[22px] md:text-[26px] font-bold font-display mb-2 text-white">Multiple awards</h3>
-                  <p className="text-[16px] text-gray-400 font-medium">For best customer service</p>
-                </div>
-              </div>
-              
-              <div className="mt-2">
-                <a href="#" className="inline-flex items-center text-[14px] font-bold font-display tracking-widest uppercase text-white hover:opacity-80 transition-opacity">
-                  EXPLORE SUPPORT ↗
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews Carousel */}
-      <section className="py-[120px] bg-[#F8FAFC] overflow-hidden">
-        <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="mb-16">
-            <h2 className="text-[44px] md:text-[52px] text-bg-dark mb-4 font-bold font-display">
-              Customer success stories
-            </h2>
-            <p className="text-[18px] md:text-[20px] text-slate-500 font-medium">
-              See how businesses and professionals grow with Stinger.
-            </p>
-          </div>
-
-          <div className="relative w-full">
-            <div className="flex gap-8 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-transform" style={{ transform: `translateX(-${reviewIndex * 70}%)` }}>
-              {reviews.map((rev, idx) => (
-                <div 
-                  key={idx} 
-                  className="w-[calc(100%-32px)] md:w-[calc(85%-16px)] lg:w-[calc(68%-16px)] shrink-0 rounded-[24px] p-10 lg:p-14 shadow-sm flex flex-col md:flex-row items-center justify-between gap-12 transition-all duration-500" 
-                  style={{ backgroundColor: rev.bg, color: rev.color }}
-                >
-                  <div className="flex-1">
-                    <div className="mb-6 opacity-80" style={{ color: rev.color === 'white' ? '#4ADE80' : '#10B981' }}>
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                    </div>
-                    <blockquote className="text-[18px] lg:text-[22px] leading-[1.6] mb-8 font-medium">
-                      {rev.text}
-                    </blockquote>
-                    <div>
-                      <h4 className="text-[18px] lg:text-[20px] font-bold mb-1 font-display">{rev.author}</h4>
-                      <p className="text-[14px] opacity-80">{rev.role}</p>
-                    </div>
-                  </div>
-                  <div className="w-[300px] h-[300px] md:w-[320px] md:h-[320px] shrink-0 relative mt-8 md:mt-0">
-                    <img 
-                      src={rev.image} 
-                      alt={rev.author} 
-                      className={`w-full h-full object-cover ${rev.shape === 'circle' ? 'rounded-full' : rev.shape === 'rounded' ? 'rounded-[32px]' : 'rounded-[40px] rounded-bl-[10px]'}`} 
-                    />
-                    {/* Floating Badge */}
-                    <div className={`absolute -right-6 top-1/2 -translate-y-1/2 w-[72px] h-[72px] rounded-[18px] flex items-center justify-center shadow-2xl ${rev.bg === '#2A5B7E' ? 'bg-white text-bg-dark' : 'bg-[#2A5B7E] text-white'}`}>
-                      {rev.badge === 'chart' ? (
-                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-                      ) : (
-                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 3.86-8.99c.77-1.12 2.3-1.14 3.09-.03.79 1.11.77 2.63.02 3.86A22 22 0 0 1 12 15z"/></svg>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="flex justify-end gap-6 mt-16 pr-4 lg:pr-12">
-            <button className="w-20 h-20 rounded-full border border-slate-300 bg-transparent cursor-pointer inline-flex items-center justify-center transition-all duration-300 text-bg-dark hover:bg-stinger-dark hover:text-white hover:border-stinger-dark" onClick={prevReview}>
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-            </button>
-            <button className="w-20 h-20 rounded-full border border-slate-300 bg-transparent cursor-pointer inline-flex items-center justify-center transition-all duration-300 text-bg-dark hover:bg-stinger-dark hover:text-white hover:border-stinger-dark" onClick={nextReview}>
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-      </section>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/web-hosting" element={<WebHosting />} />
+        </Routes>
+      </main>
 
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 pt-20 pb-10 text-[15px] text-slate-600">
@@ -1207,6 +755,7 @@ function App() {
         )}
       </div>
     </div>
+    </Router>
   );
 }
 
