@@ -7,8 +7,8 @@ function WebHosting() {
       {/* 1. Hero Section (SiteGround Style: Two-column banner) */}
       <section className="relative pt-[140px] pb-16 overflow-hidden" style={{ background: 'radial-gradient(circle at 50% 0%, #1a2a22 0%, #0d1110 60%, #0d1110 100%)' }}>
         {/* Subtle background glow */}
-        <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-[radial-gradient(circle_at_top_right,rgba(0,210,133,0.15)_0%,rgba(0,0,0,0)_60%)] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[40%] h-[50%] bg-[radial-gradient(circle_at_bottom_left,rgba(0,210,133,0.05)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[50%] h-[70%] bg-[radial-gradient(circle_at_top_right,rgba(255,249,202,0.15)_0%,rgba(0,0,0,0)_60%)] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[40%] h-[50%] bg-[radial-gradient(circle_at_bottom_left,rgba(255,249,202,0.05)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
 
         <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -16,7 +16,7 @@ function WebHosting() {
             {/* Left Content */}
             <div className="text-left flex flex-col items-start">
               {/* Green Discount Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-[2px] bg-[#00d285] text-[#121212] text-[12px] font-black mb-6 uppercase tracking-widest">
+              <div className="inline-flex items-center px-3 py-1 rounded-[2px] bg-[#FFF9CA] text-[#121212] text-[12px] font-black mb-6 uppercase tracking-widest">
                 SAVE UP TO 83%
               </div>
               
@@ -28,19 +28,19 @@ function WebHosting() {
               {/* Bullet Features with Custom Icons */}
               <ul className="flex flex-col gap-5 mb-8">
                 <li className="flex items-center gap-3.5 text-white/95 text-[16px] md:text-[17px] font-semibold">
-                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285]">
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA]">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                   </div>
                   <span>Ultrafast and reliable website performance</span>
                 </li>
                 <li className="flex items-center gap-3.5 text-white/95 text-[16px] md:text-[17px] font-semibold">
-                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285]">
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA]">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
                   </div>
                   <span>Bullet-proof security for your peace of mind</span>
                 </li>
                 <li className="flex items-center gap-3.5 text-white/95 text-[16px] md:text-[17px] font-semibold">
-                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285]">
+                  <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA]">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                   </div>
                   <span>24/7 expert human support</span>
@@ -50,7 +50,7 @@ function WebHosting() {
               {/* Pricing Callout */}
               <div className="flex items-baseline gap-2 mb-8 select-none">
                 <span className="text-[18px] text-white/60 font-medium">From</span>
-                <span className="text-[36px] md:text-[40px] text-[#00d285] font-black font-sans leading-none">$2.99<span className="text-[16px] font-semibold">/mo</span></span>
+                <span className="text-[36px] md:text-[40px] text-[#FFF9CA] font-black font-sans leading-none">$2.99<span className="text-[16px] font-semibold">/mo</span></span>
                 <span className="text-[16px] text-white/40 line-through font-medium ml-1">$17.99</span>
               </div>
               
@@ -62,7 +62,7 @@ function WebHosting() {
                 >
                   CLAIM DEAL
                 </button>
-                <span className="text-[13px] text-[#00d285] font-semibold tracking-wide">
+                <span className="text-[13px] text-[#FFF9CA] font-semibold tracking-wide">
                   Risk-Free: 30 days money back guarantee
                 </span>
               </div>
@@ -105,8 +105,8 @@ function WebHosting() {
 
               {/* Mint stamp badge with % */}
               <div className="absolute left-[38%] top-[32%] z-20 animate-pulse select-none" style={{ transform: 'rotate(-10deg)' }}>
-                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 15px 25px rgba(0, 210, 133, 0.4))' }}>
-                   <path d="M50 0L57.5 10H70L75 20L87.5 25L87.5 37.5L100 45L95 55L100 65L87.5 72.5L87.5 85L75 90L70 100H57.5L50 90L42.5 100H30L25 90L12.5 85L12.5 72.5L0 65L5 55L0 45L12.5 37.5L12.5 25L25 20L30 10H42.5L50 0Z" fill="#00d285" stroke="#121212" strokeWidth="3" strokeLinejoin="round"/>
+                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 15px 25px rgba(255, 249, 202, 0.4))' }}>
+                   <path d="M50 0L57.5 10H70L75 20L87.5 25L87.5 37.5L100 45L95 55L100 65L87.5 72.5L87.5 85L75 90L70 100H57.5L50 90L42.5 100H30L25 90L12.5 85L12.5 72.5L0 65L5 55L0 45L12.5 37.5L12.5 25L25 20L30 10H42.5L50 0Z" fill="#FFF9CA" stroke="#121212" strokeWidth="3" strokeLinejoin="round"/>
                    <text x="50" y="52" fill="#121212" fontSize="48" fontWeight="900" fontFamily="sans-serif" textAnchor="middle" dominantBaseline="middle">%</text>
                  </svg>
               </div>
@@ -120,7 +120,7 @@ function WebHosting() {
               <span>Excellent</span>
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <span key={s} className="w-[20px] h-[20px] bg-[#00d285] inline-flex items-center justify-center text-[#121212] text-[12px] font-black rounded-[2px] shadow-sm select-none">★</span>
+                  <span key={s} className="w-[20px] h-[20px] bg-[#FFF9CA] inline-flex items-center justify-center text-[#121212] text-[12px] font-black rounded-[2px] shadow-sm select-none">★</span>
                 ))}
               </div>
               <span className="font-sans">Trustpilot</span>
@@ -259,7 +259,7 @@ function WebHosting() {
               
               {/* Feature 1 */}
               <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -272,7 +272,7 @@ function WebHosting() {
 
               {/* Feature 2 */}
               <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -285,7 +285,7 @@ function WebHosting() {
 
               {/* Feature 3 */}
               <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -298,7 +298,7 @@ function WebHosting() {
 
               {/* Feature 4 */}
               <div className="flex gap-5 items-start">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00d285] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 </div>
                 <div className="flex flex-col gap-2">

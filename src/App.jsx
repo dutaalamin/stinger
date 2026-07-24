@@ -533,7 +533,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-bg-dark font-sans text-text-light flex flex-col relative w-full m-0 p-0 overflow-x-hidden selection:bg-stinger-mint selection:text-stinger-dark">
       {/* Top Promotion Bar */}
-      <div className="w-full bg-[#00d285] text-[#121212] text-center py-2.5 text-[14px] font-bold z-[100] relative select-none">
+      <div className="w-full bg-[#FFF9CA] text-[#121212] text-center py-2.5 text-[14px] font-bold z-[100] relative select-none">
         Special offer: Save up to 83%
       </div>
 
