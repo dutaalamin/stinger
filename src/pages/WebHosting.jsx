@@ -160,7 +160,7 @@ function WebHosting() {
 
       {/* 2. Pricing Plans Section */}
       <section id="pricing-plans" className="py-24 bg-[#f8f9fa] border-b border-black/5">
-        <div className="w-full max-w-[1350px] mx-auto px-6 lg:px-12">
+        <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-[32px] md:text-[40px] text-[#121212] font-bold mb-4 font-sans tracking-tight">Choose the right hosting plan</h2>
             <div className="flex items-center justify-center gap-x-8 gap-y-3 text-[14px] font-medium text-[#121212]/80 mt-6 flex-wrap">
@@ -171,7 +171,7 @@ function WebHosting() {
               <span className="flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 24/7 Expert Support</span>
             </div>
           </div>
-                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12 w-full">
             {/* Plan 1: StartUp */}
             <div className="bg-white border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col p-10 pt-12">
               <h3 className="text-[28px] font-medium text-[#121212] mb-2 font-sans">StartUp</h3>
