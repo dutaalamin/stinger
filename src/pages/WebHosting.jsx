@@ -140,7 +140,7 @@ function WebHosting() {
           </div>
 
           {/* Bottom Trustpilot Section */}
-          <div className="mt-16 flex flex-col gap-3 items-center text-center">
+          <div className="mt-24 flex flex-col gap-3 items-center text-center">
             <div className="flex items-center gap-2.5 text-[15px] font-bold text-white/90">
               <span>Excellent</span>
               <div className="flex items-center gap-1">
