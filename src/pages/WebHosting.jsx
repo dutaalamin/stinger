@@ -159,36 +159,36 @@ function WebHosting() {
       </section>
 
       {/* 2. Pricing Plans Section */}
-      <section id="pricing-plans" className="py-24 bg-[linear-gradient(to_bottom,rgba(18,18,18,1)_0%,rgba(26,26,26,1)_100%)] border-b border-white/5">
+      <section id="pricing-plans" className="py-24 bg-[#f8f9fa] border-b border-black/5">
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-[32px] md:text-[40px] text-white font-bold mb-4 font-sans tracking-tight">Choose Your Hosting Plan</h2>
-            <p className="text-[18px] text-white/60 max-w-[600px] mx-auto font-medium">Get the speed, security, and hosting resources you need for your website.</p>
+            <h2 className="text-[32px] md:text-[40px] text-[#121212] font-bold mb-4 font-sans tracking-tight">Choose Your Hosting Plan</h2>
+            <p className="text-[18px] text-[#121212]/70 max-w-[600px] mx-auto font-medium">Get the speed, security, and hosting resources you need for your website.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Plan 1: Starter */}
-            <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
-              <h3 className="text-[24px] font-bold text-white mb-2">Starter</h3>
-              <p className="text-[14px] text-white/60 mb-6">Perfect for small websites or blogs.</p>
-              <div className="mb-6 border-b border-white/10 pb-6">
-                <span className="text-[14px] text-white/50 line-through mr-2">$14.99/mo</span>
+            <div className="bg-white border border-black/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
+              <h3 className="text-[24px] font-bold text-[#121212] mb-2">Starter</h3>
+              <p className="text-[14px] text-[#121212]/70 mb-6">Perfect for small websites or blogs.</p>
+              <div className="mb-6 border-b border-black/10 pb-6">
+                <span className="text-[14px] text-[#121212]/50 line-through mr-2">$14.99/mo</span>
                 <div className="flex items-start">
-                  <span className="text-[24px] text-white font-bold mt-1">$</span>
-                  <span className="text-[56px] text-white font-black leading-none tracking-tight">2.99</span>
-                  <span className="text-[16px] text-white/70 font-medium self-end mb-2 ml-1">/mo</span>
+                  <span className="text-[24px] text-[#121212] font-bold mt-1">$</span>
+                  <span className="text-[56px] text-[#121212] font-black leading-none tracking-tight">2.99</span>
+                  <span className="text-[16px] text-[#121212]/70 font-medium self-end mb-2 ml-1">/mo</span>
                 </div>
                 <div className="mt-2 text-[13px] text-stinger-green font-bold bg-stinger-green/10 inline-block px-3 py-1 rounded-full">Save 80%</div>
               </div>
               <ul className="flex flex-col gap-4 flex-1 mb-8">
                 {['1 Website', '10 GB Web Space', '~ 10,000 Visits Monthly', 'Unmetered Traffic', 'Free SSL', 'Daily Backup', 'Free CDN', 'Free Email', 'Managed WordPress'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[14px] text-white/80 font-medium">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <li key={i} className="flex items-start gap-3 text-[14px] text-[#121212]/80 font-medium">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#FFF9CA] text-[#FFF9CA] bg-transparent transition-all hover:bg-[#FFF9CA] hover:text-[#121212] cursor-pointer">
+              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#121212] text-[#121212] bg-transparent transition-all hover:bg-[#121212] hover:text-[#FFF9CA] cursor-pointer">
                 Get Plan
               </button>
             </div>
@@ -223,58 +223,58 @@ function WebHosting() {
             </div>
 
             {/* Plan 3: Elite */}
-            <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
-              <h3 className="text-[24px] font-bold text-white mb-2">Elite</h3>
-              <p className="text-[14px] text-white/60 mb-6">Optimized for high-traffic sites.</p>
-              <div className="mb-6 border-b border-white/10 pb-6">
-                <span className="text-[14px] text-white/50 line-through mr-2">$39.99/mo</span>
+            <div className="bg-white border border-black/10 rounded-2xl shadow-xl p-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col backdrop-blur-xl">
+              <h3 className="text-[24px] font-bold text-[#121212] mb-2">Elite</h3>
+              <p className="text-[14px] text-[#121212]/70 mb-6">Optimized for high-traffic sites.</p>
+              <div className="mb-6 border-b border-black/10 pb-6">
+                <span className="text-[14px] text-[#121212]/50 line-through mr-2">$39.99/mo</span>
                 <div className="flex items-start">
-                  <span className="text-[24px] text-white font-bold mt-1">$</span>
-                  <span className="text-[56px] text-white font-black leading-none tracking-tight">7.99</span>
-                  <span className="text-[16px] text-white/70 font-medium self-end mb-2 ml-1">/mo</span>
+                  <span className="text-[24px] text-[#121212] font-bold mt-1">$</span>
+                  <span className="text-[56px] text-[#121212] font-black leading-none tracking-tight">7.99</span>
+                  <span className="text-[16px] text-[#121212]/70 font-medium self-end mb-2 ml-1">/mo</span>
                 </div>
                 <div className="mt-2 text-[13px] text-stinger-green font-bold bg-stinger-green/10 inline-block px-3 py-1 rounded-full">Save 80%</div>
               </div>
               <ul className="flex flex-col gap-4 flex-1 mb-8">
                 {['Unlimited Websites', '40 GB Web Space', '~ 400,000 Visits Monthly', 'Unmetered Traffic', 'Free SSL', 'Daily Backup', 'Free CDN', 'Free Email', 'Managed WordPress', 'On-demand Backup Copies', '30% Faster PHP', 'Staging + Git', 'Highest Tier of Resources'].map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[14px] text-white/80 font-medium">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF9CA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <li key={i} className="flex items-start gap-3 text-[14px] text-[#121212]/80 font-medium">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121212" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#FFF9CA] text-[#FFF9CA] bg-transparent transition-all hover:bg-[#FFF9CA] hover:text-[#121212] cursor-pointer">
+              <button className="w-full py-4 rounded-xl font-bold text-[16px] border-2 border-[#121212] text-[#121212] bg-transparent transition-all hover:bg-[#121212] hover:text-[#FFF9CA] cursor-pointer">
                 Get Plan
               </button>
             </div>
             
           </div>
           
-          <div className="mt-8 text-center text-white/50 text-[14px] font-medium">
+          <div className="mt-8 text-center text-[#121212]/60 text-[14px] font-medium">
             All plans include a 30-day money-back guarantee. Prices exclude VAT.
           </div>
         </div>
       </section>
 
       {/* 3. Host Here, Succeed Everywhere Section (SiteGround Style) */}
-      <section className="py-24 bg-[#121212] relative border-b border-white/5">
+      <section className="py-24 bg-white relative border-b border-black/5">
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             {/* Left Column: Visual & Headline */}
             <div className="flex flex-col gap-6 text-center lg:text-left">
-              <h2 className="text-[36px] md:text-[44px] lg:text-[48px] text-white font-extrabold leading-tight font-sans tracking-tight">
+              <h2 className="text-[36px] md:text-[44px] lg:text-[48px] text-[#121212] font-extrabold leading-tight font-sans tracking-tight">
                 Host here, succeed everywhere
               </h2>
-              <p className="text-[18px] text-white/70 max-w-[500px] mx-auto lg:mx-0 leading-relaxed font-medium">
+              <p className="text-[18px] text-[#121212]/70 max-w-[500px] mx-auto lg:mx-0 leading-relaxed font-medium">
                 We take care of the technical stuff. You take care of your customers.
               </p>
               {/* Visual Mockup */}
-              <div className="mt-6 relative w-full aspect-video max-w-[500px] mx-auto lg:mx-0 bg-black/40 border border-white/10 rounded-[24px] overflow-hidden shadow-2xl">
+              <div className="mt-6 relative w-full aspect-video max-w-[500px] mx-auto lg:mx-0 bg-slate-100 border border-black/10 rounded-[24px] overflow-hidden shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80" 
                   alt="Host Here, Succeed Everywhere" 
-                  className="w-full h-full object-cover opacity-80 filter brightness-95" 
+                  className="w-full h-full object-cover opacity-90" 
                 />
               </div>
             </div>
@@ -283,39 +283,39 @@ function WebHosting() {
             <div className="flex flex-col gap-8">
               
               {/* Feature 1 */}
-              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
+              <div className="flex gap-5 items-start pb-8 border-b border-black/10">
+                <div className="w-12 h-12 rounded-xl bg-[#121212]/5 border border-black/5 flex items-center justify-center text-[#121212] shrink-0 shadow-sm">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-[20px] font-bold text-white m-0">Start a new site with a click</h4>
-                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                  <h4 className="text-[20px] font-bold text-[#121212] m-0">Start a new site with a click</h4>
+                  <p className="text-[15px] text-[#121212]/70 leading-relaxed m-0 font-medium">
                     Create your perfect website effortlessly with our automated site wizard and free installation of WordPress or other CMS.
                   </p>
                 </div>
               </div>
 
               {/* Feature 2 */}
-              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <div className="flex gap-5 items-start pb-8 border-b border-black/10">
+                <div className="w-12 h-12 rounded-xl bg-[#121212]/5 border border-black/5 flex items-center justify-center text-[#121212] shrink-0 shadow-sm">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-[20px] font-bold text-white m-0">Move your existing site</h4>
-                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                  <h4 className="text-[20px] font-bold text-[#121212] m-0">Move your existing site</h4>
+                  <p className="text-[15px] text-[#121212]/70 leading-relaxed m-0 font-medium">
                     Already have a website? Let our experts transfer it for you or use our automatic migrator for WordPress sites. Avoid downtime, stress, and extra costs. Your site stays live the entire time.
                   </p>
                 </div>
               </div>
 
               {/* Feature 3 */}
-              <div className="flex gap-5 items-start pb-8 border-b border-white/10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
+              <div className="flex gap-5 items-start pb-8 border-b border-black/10">
+                <div className="w-12 h-12 rounded-xl bg-[#121212]/5 border border-black/5 flex items-center justify-center text-[#121212] shrink-0 shadow-sm">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-[20px] font-bold text-white m-0">Get professional business email</h4>
-                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                  <h4 className="text-[20px] font-bold text-[#121212] m-0">Get professional business email</h4>
+                  <p className="text-[15px] text-[#121212]/70 leading-relaxed m-0 font-medium">
                     Build credibility with unlimited email accounts at your own domain, including free spam protection and webmail.
                   </p>
                 </div>
@@ -323,12 +323,12 @@ function WebHosting() {
 
               {/* Feature 4 */}
               <div className="flex gap-5 items-start">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FFF9CA] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#121212]/5 border border-black/5 flex items-center justify-center text-[#121212] shrink-0 shadow-sm">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h4 className="text-[20px] font-bold text-white m-0">Start selling online anytime</h4>
-                  <p className="text-[15px] text-white/60 leading-relaxed m-0 font-medium">
+                  <h4 className="text-[20px] font-bold text-[#121212] m-0">Start selling online anytime</h4>
+                  <p className="text-[15px] text-[#121212]/70 leading-relaxed m-0 font-medium">
                     Start your online shop with a free installation of the shopping cart of your choice and enjoy free features such as SSL, daily backups and more.
                   </p>
                 </div>
